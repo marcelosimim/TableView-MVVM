@@ -8,19 +8,33 @@
 import Foundation
 
 protocol HomeViewModelProtocol {
-    func getCells() -> [Player]
+    func getCells() -> [CellConfigurator]
     func shuffleCells()
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
-    private var players: [Player] = [ Player(type: .neymar), Player(type: .vinijr), Player(type: .richarlisson), Player(type: .raphinha), Player(type: .paqueta), Player(type: .casemiro), Player(type: .thiago), Player(type: .marquinhos), Player(type: .danilo), Player(type: .alexSandro), Player(type: .alisson) ]
+    typealias PlayerCellConfigurator = TableCellConfigurator<PlayerCell, Player>
+    typealias IMCCellConfigurator = TableCellConfigurator<IMCCell, IMC>
+    private var cells: [CellConfigurator] = [ PlayerCellConfigurator(item: Player(type: .neymar)),
+                                              PlayerCellConfigurator(item: Player(type: .vinijr)),
+                                              PlayerCellConfigurator(item: Player(type: .richarlisson)),
+                                              PlayerCellConfigurator(item: Player(type: .raphinha)),
+                                              PlayerCellConfigurator(item: Player(type: .paqueta)),
+                                              PlayerCellConfigurator(item: Player(type: .casemiro)),
+                                              PlayerCellConfigurator(item: Player(type: .thiago)),
+                                              PlayerCellConfigurator(item: Player(type: .marquinhos)),
+                                              PlayerCellConfigurator(item: Player(type: .danilo)),
+                                              PlayerCellConfigurator(item: Player(type: .alexSandro)),
+                                              PlayerCellConfigurator(item: Player(type: .alisson)),
+                                              IMCCellConfigurator(item: IMC(title: "Calculadora de IMC")) ]
+}
 
-
-    func getCells() -> [Player] {
-        players
+extension HomeViewModel {
+    func getCells() -> [CellConfigurator] {
+        cells
     }
 
     func shuffleCells() {
-        players = players.shuffled()
+        cells = cells.shuffled()
     }
 }

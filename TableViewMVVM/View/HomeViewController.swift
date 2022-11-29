@@ -35,12 +35,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PlayerTableViewCell.identifier) as? PlayerTableViewCell else {
+        let model = viewModel.getCells()[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: type(of: model).identifier) else {
             fatalError()
         }
-        let model = viewModel.getCells()[indexPath.row]
-
-        cell.configure(model)
+        model.configure(cell: cell)
         return cell
     }
 
@@ -48,17 +47,27 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         200
     }
 
+    #warning("código feio")
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = viewModel.getCells()[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: type(of: model).identifier) as? PlayerCell {
+            let player = viewModel.getCells()[indexPath.row] as! TableCellConfigurator<PlayerCell, Player>
+            didTappedPlayer(player.item)
+        } else {
+            navigateTo(IMCViewController())
+        }
         tableView.deselectRow(at: indexPath, animated: true)
-        didTappedCell(indexPath)
     }
 
-    private func didTappedCell(_ indexPath: IndexPath) {
-        let player = viewModel.getCells()[indexPath.row]
+    private func didTappedPlayer(_ player: Player) {
         let alertController = UIAlertController(title: "Quem sou eu?", message: "Eu sou o \(player.type.name)!", preferredStyle: .alert)
         let action = UIAlertAction(title: "Top!!!", style: .cancel)
 
         alertController.addAction(action)
         present(alertController, animated: true)
+    }
+
+    private func navigateTo(_ vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

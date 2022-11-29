@@ -7,9 +7,10 @@
 
 import UIKit
 
-class PlayerTableViewCell: UITableViewCell {
-    static var identifier = "\(PlayerTableViewCell.self)"
-
+class PlayerCell: UITableViewCell, ConfigurableCell {
+    typealias DataType = Player
+    static var identifier = "\(PlayerCell.self)"
+    
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .bold)

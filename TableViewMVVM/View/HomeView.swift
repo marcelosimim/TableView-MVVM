@@ -15,7 +15,8 @@ protocol HomeViewProtocol {
 class HomeView: HomeViewProtocol {
     lazy var tableView: UITableView = {
         let tableview = UITableView()
-        tableview.register(PlayerTableViewCell.self, forCellReuseIdentifier: PlayerTableViewCell.identifier)
+        tableview.register(PlayerCell.self, forCellReuseIdentifier: PlayerCell.identifier)
+        tableview.register(IMCCell.self, forCellReuseIdentifier: IMCCell.identifier)
         tableview.translatesAutoresizingMaskIntoConstraints = false
         return tableview
     }()

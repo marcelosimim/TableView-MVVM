@@ -16,7 +16,13 @@
 		A3455B862936315500215FAF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B852936315500215FAF /* Player.swift */; };
 		A3455B892936320D00215FAF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B882936320D00215FAF /* UIImage.swift */; };
 		A3455B8C2936358500215FAF /* PlayerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B8B2936358500215FAF /* PlayerType.swift */; };
-		A3455B8F293639AB00215FAF /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B8E293639AB00215FAF /* PlayerTableViewCell.swift */; };
+		A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B8E293639AB00215FAF /* PlayerCell.swift */; };
+		A3455B962936C1CC00215FAF /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B952936C1CC00215FAF /* ConfigurableCell.swift */; };
+		A3455B982936C25A00215FAF /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B972936C25A00215FAF /* CellConfigurator.swift */; };
+		A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B992936C2A400215FAF /* TableCellConfigurator.swift */; };
+		A3455B9C2936C4A000215FAF /* IMCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B9B2936C4A000215FAF /* IMCCell.swift */; };
+		A3455B9E2936C4EA00215FAF /* IMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B9D2936C4EA00215FAF /* IMC.swift */; };
+		A3DC903B2936D04E00DCA426 /* IMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC903A2936D04E00DCA426 /* IMCViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +37,13 @@
 		A3455B852936315500215FAF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A3455B882936320D00215FAF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A3455B8B2936358500215FAF /* PlayerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerType.swift; sourceTree = "<group>"; };
-		A3455B8E293639AB00215FAF /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		A3455B8E293639AB00215FAF /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		A3455B952936C1CC00215FAF /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		A3455B972936C25A00215FAF /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		A3455B992936C2A400215FAF /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
+		A3455B9B2936C4A000215FAF /* IMCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCCell.swift; sourceTree = "<group>"; };
+		A3455B9D2936C4EA00215FAF /* IMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMC.swift; sourceTree = "<group>"; };
+		A3DC903A2936D04E00DCA426 /* IMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 		A3455B6529362E8D00215FAF /* TableViewMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				A3455B942936C17F00215FAF /* Protocols */,
 				A3455B8D2936399A00215FAF /* Components */,
 				A3455B8A2936357500215FAF /* Enum */,
 				A3455B7B29362EA700215FAF /* Model */,
@@ -90,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A3455B852936315500215FAF /* Player.swift */,
+				A3455B9D2936C4EA00215FAF /* IMC.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +113,7 @@
 			children = (
 				A3455B7F29362FA400215FAF /* HomeViewController.swift */,
 				A3455B8129362FBD00215FAF /* HomeView.swift */,
+				A3DC903A2936D04E00DCA426 /* IMCViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,9 +153,20 @@
 		A3455B8D2936399A00215FAF /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A3455B8E293639AB00215FAF /* PlayerTableViewCell.swift */,
+				A3455B8E293639AB00215FAF /* PlayerCell.swift */,
+				A3455B992936C2A400215FAF /* TableCellConfigurator.swift */,
+				A3455B9B2936C4A000215FAF /* IMCCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A3455B942936C17F00215FAF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A3455B952936C1CC00215FAF /* ConfigurableCell.swift */,
+				A3455B972936C25A00215FAF /* CellConfigurator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,15 +238,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3455B962936C1CC00215FAF /* ConfigurableCell.swift in Sources */,
+				A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */,
 				A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */,
+				A3455B982936C25A00215FAF /* CellConfigurator.swift in Sources */,
 				A3455B8229362FBD00215FAF /* HomeView.swift in Sources */,
+				A3455B9C2936C4A000215FAF /* IMCCell.swift in Sources */,
 				A3455B8C2936358500215FAF /* PlayerType.swift in Sources */,
 				A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */,
 				A3455B84293630C700215FAF /* HomeViewModel.swift in Sources */,
+				A3DC903B2936D04E00DCA426 /* IMCViewController.swift in Sources */,
 				A3455B862936315500215FAF /* Player.swift in Sources */,
-				A3455B8F293639AB00215FAF /* PlayerTableViewCell.swift in Sources */,
+				A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */,
 				A3455B8029362FA400215FAF /* HomeViewController.swift in Sources */,
 				A3455B892936320D00215FAF /* UIImage.swift in Sources */,
+				A3455B9E2936C4EA00215FAF /* IMC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
