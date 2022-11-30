@@ -32,11 +32,10 @@ class IMCViewController: UIViewController {
 
     private func binds() {
         viewmodel.didFinishValidation = { [weak self] imc in
-            guard let imc = imc else {
-                self?.showError()
-                return
-            }
             self?.goToResultView(imc)
+        }
+        viewmodel.didFinishValidationFailure = { [weak self] errorMessage in
+            self?.showError(errorMessage)
         }
     }
 
@@ -45,8 +44,8 @@ class IMCViewController: UIViewController {
         navigationController?.pushViewController(resultVC, animated: true)
     }
 
-    private func showError() {
-        let alertController = UIAlertController(title: "Dados inválidos", message: "Preencha novamente", preferredStyle: .alert)
+    private func showError(_ message: String) {
+        let alertController = UIAlertController(title: "Dados inválidos", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .cancel)
 
         alertController.addAction(action)
