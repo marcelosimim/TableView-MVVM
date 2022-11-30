@@ -38,9 +38,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = viewModel.getCells()[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: type(of: model).identifier) else {
-            fatalError()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: type(of: model).identifier) else { fatalError() }
         model.configure(cell: cell)
         return cell
     }
@@ -49,15 +47,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         200
     }
 
-    #warning("código feio")
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = viewModel.getCells()[indexPath.row]
-        if let cell = tableView.dequeueReusableCell(withIdentifier: type(of: model).identifier) as? PlayerCell {
-            let player = viewModel.getCells()[indexPath.row] as! TableCellConfigurator<PlayerCell, Player>
+        let type = type(of: model).identifier
+        
+        if type == PlayerCell.identifier {
+            let player = model as! TableCellConfigurator<PlayerCell, Player>
             didTappedPlayer(player.item)
-        } else {
-            navigateTo(IMCViewController())
         }
+        else if type == IMCCell.identifier { navigateTo(IMCViewController()) }
+
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
