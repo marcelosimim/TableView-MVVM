@@ -21,8 +21,19 @@
 		A3455B982936C25A00215FAF /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B972936C25A00215FAF /* CellConfigurator.swift */; };
 		A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B992936C2A400215FAF /* TableCellConfigurator.swift */; };
 		A3455B9C2936C4A000215FAF /* IMCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B9B2936C4A000215FAF /* IMCCell.swift */; };
-		A3455B9E2936C4EA00215FAF /* IMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B9D2936C4EA00215FAF /* IMC.swift */; };
+		A3455B9E2936C4EA00215FAF /* IMCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B9D2936C4EA00215FAF /* IMCScreen.swift */; };
 		A3DC903B2936D04E00DCA426 /* IMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC903A2936D04E00DCA426 /* IMCViewController.swift */; };
+		A3DC903F2936D47100DCA426 /* IMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC903E2936D47100DCA426 /* IMCView.swift */; };
+		A3DC90412936D5C600DCA426 /* IMCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90402936D5C600DCA426 /* IMCTextField.swift */; };
+		A3DC90432936DB0600DCA426 /* IMCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90422936DB0600DCA426 /* IMCViewModel.swift */; };
+		A3DC904529377E0200DCA426 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC904429377E0200DCA426 /* Double.swift */; };
+		A3DC90472937B53600DCA426 /* IMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90462937B53600DCA426 /* IMC.swift */; };
+		A3DC904A2937B87C00DCA426 /* IMCResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90492937B87B00DCA426 /* IMCResultViewController.swift */; };
+		A3DC904C2937B9F900DCA426 /* IMCResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC904B2937B9F900DCA426 /* IMCResultView.swift */; };
+		A3DC904E2937BCA400DCA426 /* IMCRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC904D2937BCA400DCA426 /* IMCRange.swift */; };
+		A3DC90502937BFCE00DCA426 /* IMCResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */; };
+		A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90522937CF6F00DCA426 /* IMCMainButton.swift */; };
+		A3DC90552937CFBA00DCA426 /* IMCSecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +53,19 @@
 		A3455B972936C25A00215FAF /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
 		A3455B992936C2A400215FAF /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
 		A3455B9B2936C4A000215FAF /* IMCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCCell.swift; sourceTree = "<group>"; };
-		A3455B9D2936C4EA00215FAF /* IMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMC.swift; sourceTree = "<group>"; };
+		A3455B9D2936C4EA00215FAF /* IMCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCScreen.swift; sourceTree = "<group>"; };
 		A3DC903A2936D04E00DCA426 /* IMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewController.swift; sourceTree = "<group>"; };
+		A3DC903E2936D47100DCA426 /* IMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCView.swift; sourceTree = "<group>"; };
+		A3DC90402936D5C600DCA426 /* IMCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCTextField.swift; sourceTree = "<group>"; };
+		A3DC90422936DB0600DCA426 /* IMCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewModel.swift; sourceTree = "<group>"; };
+		A3DC904429377E0200DCA426 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		A3DC90462937B53600DCA426 /* IMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMC.swift; sourceTree = "<group>"; };
+		A3DC90492937B87B00DCA426 /* IMCResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultViewController.swift; sourceTree = "<group>"; };
+		A3DC904B2937B9F900DCA426 /* IMCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultView.swift; sourceTree = "<group>"; };
+		A3DC904D2937BCA400DCA426 /* IMCRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCRange.swift; sourceTree = "<group>"; };
+		A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultViewModel.swift; sourceTree = "<group>"; };
+		A3DC90522937CF6F00DCA426 /* IMCMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCMainButton.swift; sourceTree = "<group>"; };
+		A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCSecondButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				A3455B852936315500215FAF /* Player.swift */,
-				A3455B9D2936C4EA00215FAF /* IMC.swift */,
+				A3455B9D2936C4EA00215FAF /* IMCScreen.swift */,
+				A3DC90462937B53600DCA426 /* IMC.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,9 +134,8 @@
 		A3455B7C29362EB100215FAF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A3455B7F29362FA400215FAF /* HomeViewController.swift */,
-				A3455B8129362FBD00215FAF /* HomeView.swift */,
-				A3DC903A2936D04E00DCA426 /* IMCViewController.swift */,
+				A3DC903D2936D46000DCA426 /* IMC */,
+				A3DC903C2936D45700DCA426 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				A3455B83293630C700215FAF /* HomeViewModel.swift */,
+				A3DC90422936DB0600DCA426 /* IMCViewModel.swift */,
+				A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -138,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				A3455B882936320D00215FAF /* UIImage.swift */,
+				A3DC904429377E0200DCA426 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A3455B8B2936358500215FAF /* PlayerType.swift */,
+				A3DC904D2937BCA400DCA426 /* IMCRange.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -153,9 +179,10 @@
 		A3455B8D2936399A00215FAF /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A3455B8E293639AB00215FAF /* PlayerCell.swift */,
-				A3455B992936C2A400215FAF /* TableCellConfigurator.swift */,
-				A3455B9B2936C4A000215FAF /* IMCCell.swift */,
+				A3DC90512937CF5200DCA426 /* Cells */,
+				A3DC90402936D5C600DCA426 /* IMCTextField.swift */,
+				A3DC90522937CF6F00DCA426 /* IMCMainButton.swift */,
+				A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -167,6 +194,44 @@
 				A3455B972936C25A00215FAF /* CellConfigurator.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A3DC903C2936D45700DCA426 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A3455B7F29362FA400215FAF /* HomeViewController.swift */,
+				A3455B8129362FBD00215FAF /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A3DC903D2936D46000DCA426 /* IMC */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC90482937B86900DCA426 /* IMCResult */,
+				A3DC903A2936D04E00DCA426 /* IMCViewController.swift */,
+				A3DC903E2936D47100DCA426 /* IMCView.swift */,
+			);
+			path = IMC;
+			sourceTree = "<group>";
+		};
+		A3DC90482937B86900DCA426 /* IMCResult */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC90492937B87B00DCA426 /* IMCResultViewController.swift */,
+				A3DC904B2937B9F900DCA426 /* IMCResultView.swift */,
+			);
+			path = IMCResult;
+			sourceTree = "<group>";
+		};
+		A3DC90512937CF5200DCA426 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A3455B8E293639AB00215FAF /* PlayerCell.swift */,
+				A3455B992936C2A400215FAF /* TableCellConfigurator.swift */,
+				A3455B9B2936C4A000215FAF /* IMCCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,21 +303,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DC904E2937BCA400DCA426 /* IMCRange.swift in Sources */,
+				A3DC90432936DB0600DCA426 /* IMCViewModel.swift in Sources */,
 				A3455B962936C1CC00215FAF /* ConfigurableCell.swift in Sources */,
 				A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */,
 				A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */,
+				A3DC90412936D5C600DCA426 /* IMCTextField.swift in Sources */,
 				A3455B982936C25A00215FAF /* CellConfigurator.swift in Sources */,
 				A3455B8229362FBD00215FAF /* HomeView.swift in Sources */,
 				A3455B9C2936C4A000215FAF /* IMCCell.swift in Sources */,
 				A3455B8C2936358500215FAF /* PlayerType.swift in Sources */,
+				A3DC904529377E0200DCA426 /* Double.swift in Sources */,
 				A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */,
 				A3455B84293630C700215FAF /* HomeViewModel.swift in Sources */,
 				A3DC903B2936D04E00DCA426 /* IMCViewController.swift in Sources */,
+				A3DC904C2937B9F900DCA426 /* IMCResultView.swift in Sources */,
+				A3DC90552937CFBA00DCA426 /* IMCSecondButton.swift in Sources */,
+				A3DC90472937B53600DCA426 /* IMC.swift in Sources */,
+				A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */,
 				A3455B862936315500215FAF /* Player.swift in Sources */,
 				A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */,
+				A3DC903F2936D47100DCA426 /* IMCView.swift in Sources */,
 				A3455B8029362FA400215FAF /* HomeViewController.swift in Sources */,
 				A3455B892936320D00215FAF /* UIImage.swift in Sources */,
-				A3455B9E2936C4EA00215FAF /* IMC.swift in Sources */,
+				A3455B9E2936C4EA00215FAF /* IMCScreen.swift in Sources */,
+				A3DC904A2937B87C00DCA426 /* IMCResultViewController.swift in Sources */,
+				A3DC90502937BFCE00DCA426 /* IMCResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,11 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Jogadores"
         setupTableView()
         viewModel.shuffleCells()
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        title = "Menu"
     }
 
     override func loadView() {

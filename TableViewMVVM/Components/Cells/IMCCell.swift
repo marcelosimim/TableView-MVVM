@@ -8,7 +8,7 @@
 import UIKit
 
 class IMCCell: UITableViewCell, ConfigurableCell {
-    typealias DataType = IMC
+    typealias DataType = IMCScreen
     static var identifier = "\(IMCCell.self)"
 
     private lazy var titleLabel: UILabel = {
@@ -35,7 +35,7 @@ class IMCCell: UITableViewCell, ConfigurableCell {
         ])
     }
 
-    func configure(_ model: IMC) {
+    func configure(_ model: IMCScreen) {
         titleLabel.text = model.title
     }
 }

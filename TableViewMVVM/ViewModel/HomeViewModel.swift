@@ -14,7 +14,7 @@ protocol HomeViewModelProtocol {
 
 final class HomeViewModel: HomeViewModelProtocol {
     typealias PlayerCellConfigurator = TableCellConfigurator<PlayerCell, Player>
-    typealias IMCCellConfigurator = TableCellConfigurator<IMCCell, IMC>
+    typealias IMCCellConfigurator = TableCellConfigurator<IMCCell, IMCScreen>
     private var cells: [CellConfigurator] = [ PlayerCellConfigurator(item: Player(type: .neymar)),
                                               PlayerCellConfigurator(item: Player(type: .vinijr)),
                                               PlayerCellConfigurator(item: Player(type: .richarlisson)),
@@ -26,7 +26,7 @@ final class HomeViewModel: HomeViewModelProtocol {
                                               PlayerCellConfigurator(item: Player(type: .danilo)),
                                               PlayerCellConfigurator(item: Player(type: .alexSandro)),
                                               PlayerCellConfigurator(item: Player(type: .alisson)),
-                                              IMCCellConfigurator(item: IMC(title: "Calculadora de IMC")) ]
+                                              IMCCellConfigurator(item: IMCScreen(title: "Calculadora de IMC")) ]
 }
 
 extension HomeViewModel {
