@@ -42,6 +42,10 @@
 		A3F3B60129392B810024A208 /* OldLicensePlateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60029392B810024A208 /* OldLicensePlateTextField.swift */; };
 		A3F3B603293934410024A208 /* NewLicensePlateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B602293934410024A208 /* NewLicensePlateTextField.swift */; };
 		A3F3B60529393C3C0024A208 /* CarRotationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */; };
+		A3F3B60A293960BF0024A208 /* CarRotationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B609293960BF0024A208 /* CarRotationResultViewController.swift */; };
+		A3F3B60C2939619A0024A208 /* CarRotationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60B2939619A0024A208 /* CarRotationResultView.swift */; };
+		A3F3B60E293962850024A208 /* CarRotationResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60D293962850024A208 /* CarRotationResultViewModel.swift */; };
+		A3F3B610293963510024A208 /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60F293963510024A208 /* Weekday.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		A3F3B60029392B810024A208 /* OldLicensePlateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldLicensePlateTextField.swift; sourceTree = "<group>"; };
 		A3F3B602293934410024A208 /* NewLicensePlateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLicensePlateTextField.swift; sourceTree = "<group>"; };
 		A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationViewModel.swift; sourceTree = "<group>"; };
+		A3F3B609293960BF0024A208 /* CarRotationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationResultViewController.swift; sourceTree = "<group>"; };
+		A3F3B60B2939619A0024A208 /* CarRotationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationResultView.swift; sourceTree = "<group>"; };
+		A3F3B60D293962850024A208 /* CarRotationResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationResultViewModel.swift; sourceTree = "<group>"; };
+		A3F3B60F293963510024A208 /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,7 @@
 				A3DC90422936DB0600DCA426 /* IMCViewModel.swift */,
 				A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */,
 				A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */,
+				A3F3B60D293962850024A208 /* CarRotationResultViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 			children = (
 				A3455B8B2936358500215FAF /* PlayerType.swift */,
 				A3DC904D2937BCA400DCA426 /* IMCRange.swift */,
+				A3F3B60F293963510024A208 /* Weekday.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -264,6 +274,7 @@
 		A3DC905E29390E8400DCA426 /* Car Rotation */ = {
 			isa = PBXGroup;
 			children = (
+				A3F3B608293960A50024A208 /* CarRotationResult */,
 				A3DC905F29390E9A00DCA426 /* CarRotationViewController.swift */,
 				A3DC9061293915CE00DCA426 /* CarRotationView.swift */,
 			);
@@ -288,6 +299,15 @@
 				A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		A3F3B608293960A50024A208 /* CarRotationResult */ = {
+			isa = PBXGroup;
+			children = (
+				A3F3B609293960BF0024A208 /* CarRotationResultViewController.swift */,
+				A3F3B60B2939619A0024A208 /* CarRotationResultView.swift */,
+			);
+			path = CarRotationResult;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,18 +381,22 @@
 			files = (
 				A3DC904E2937BCA400DCA426 /* IMCRange.swift in Sources */,
 				A3F3B60529393C3C0024A208 /* CarRotationViewModel.swift in Sources */,
+				A3F3B60A293960BF0024A208 /* CarRotationResultViewController.swift in Sources */,
 				A3DC90432936DB0600DCA426 /* IMCViewModel.swift in Sources */,
 				A3455B962936C1CC00215FAF /* ConfigurableCell.swift in Sources */,
 				A3DC905729390A4700DCA426 /* CarRotationCell.swift in Sources */,
+				A3F3B610293963510024A208 /* Weekday.swift in Sources */,
 				A3DC905A29390A8B00DCA426 /* CarRotationScreen.swift in Sources */,
 				A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */,
 				A3F3B603293934410024A208 /* NewLicensePlateTextField.swift in Sources */,
 				A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */,
+				A3F3B60C2939619A0024A208 /* CarRotationResultView.swift in Sources */,
 				A3DC90412936D5C600DCA426 /* IMCTextField.swift in Sources */,
 				A3455B982936C25A00215FAF /* CellConfigurator.swift in Sources */,
 				A3F3B5FF29392AEA0024A208 /* RoundedTextField.swift in Sources */,
 				A3455B8229362FBD00215FAF /* HomeView.swift in Sources */,
 				A3455B9C2936C4A000215FAF /* IMCCell.swift in Sources */,
+				A3F3B60E293962850024A208 /* CarRotationResultViewModel.swift in Sources */,
 				A3455B8C2936358500215FAF /* PlayerType.swift in Sources */,
 				A3DC904529377E0200DCA426 /* Double.swift in Sources */,
 				A3DC9062293915CE00DCA426 /* CarRotationView.swift in Sources */,

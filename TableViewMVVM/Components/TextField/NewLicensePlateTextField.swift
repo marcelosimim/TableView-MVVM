@@ -37,7 +37,6 @@ class NewLicensePlateTextField: UITextField {
 
     private lazy var fourthLetter: RoundedTextField = {
         let textfield = RoundedTextField()
-        textfield.keyboardType = .numberPad
         textfield.translatesAutoresizingMaskIntoConstraints = false
         return textfield
     }()

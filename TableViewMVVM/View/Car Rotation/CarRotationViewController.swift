@@ -33,16 +33,17 @@ class CarRotationViewController: UIViewController {
     }
 
     private func binds() {
-        viewmodel.didFinishValidationSuccess = { [weak self] in
-            self?.navigateToResult()
+        viewmodel.didFinishValidationSuccess = { [weak self] licensePlate in
+            self?.navigateToResult(licensePlate)
         }
         viewmodel.didFinishValidationFailure = { [weak self] in
             self?.showError()
         }
     }
 
-    private func navigateToResult() {
-        // navigationController?.pushViewController(vc, animated: true)
+    private func navigateToResult(_ licensePlate: String) {
+        let resultVC = CarRotationResultViewController(licensePlate: licensePlate)
+         navigationController?.pushViewController(resultVC, animated: true)
     }
 
     private func showError() {
