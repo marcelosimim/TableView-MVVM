@@ -32,4 +32,8 @@ extension UIImage {
     static var obesity1: UIImage { generateImage("obesity1") }
     static var obesity2: UIImage { generateImage("obesity2") }
     static var obesity3: UIImage { generateImage("obesity3") }
+
+    // MARK: -
+    static var newLicensePlate: UIImage { generateImage("placa-nova") }
+    static var oldLicensePlate: UIImage { generateImage("placa-antiga") }
 }

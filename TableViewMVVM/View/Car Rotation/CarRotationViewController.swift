@@ -8,9 +8,14 @@
 import UIKit
 
 class CarRotationViewController: UIViewController {
+    private let carRotationView: CarRotationViewProtocol = CarRotationView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
+    }
+
+    override func loadView() {
+        super.loadView()
+        view = carRotationView.view
     }
 }
