@@ -41,6 +41,7 @@
 		A3F3B5FF29392AEA0024A208 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B5FE29392AEA0024A208 /* RoundedTextField.swift */; };
 		A3F3B60129392B810024A208 /* OldLicensePlateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60029392B810024A208 /* OldLicensePlateTextField.swift */; };
 		A3F3B603293934410024A208 /* NewLicensePlateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B602293934410024A208 /* NewLicensePlateTextField.swift */; };
+		A3F3B60529393C3C0024A208 /* CarRotationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		A3F3B5FE29392AEA0024A208 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		A3F3B60029392B810024A208 /* OldLicensePlateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldLicensePlateTextField.swift; sourceTree = "<group>"; };
 		A3F3B602293934410024A208 /* NewLicensePlateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLicensePlateTextField.swift; sourceTree = "<group>"; };
+		A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				A3455B83293630C700215FAF /* HomeViewModel.swift */,
 				A3DC90422936DB0600DCA426 /* IMCViewModel.swift */,
 				A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */,
+				A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3DC904E2937BCA400DCA426 /* IMCRange.swift in Sources */,
+				A3F3B60529393C3C0024A208 /* CarRotationViewModel.swift in Sources */,
 				A3DC90432936DB0600DCA426 /* IMCViewModel.swift in Sources */,
 				A3455B962936C1CC00215FAF /* ConfigurableCell.swift in Sources */,
 				A3DC905729390A4700DCA426 /* CarRotationCell.swift in Sources */,

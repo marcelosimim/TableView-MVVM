@@ -8,6 +8,8 @@
 import UIKit
 
 class OldLicensePlateTextField: UITextField {
+    lazy var textfields: [UITextField] = [firstLetter, secondLetter, thirdLetter, firstNumber, secondNumber, thirdNumber, fourthNumber]
+
     private lazy var firstLetter: RoundedTextField = {
         let textfield = RoundedTextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
@@ -122,5 +124,11 @@ class OldLicensePlateTextField: UITextField {
             fourthNumber.widthAnchor.constraint(equalToConstant: textfieldHeight),
             fourthNumber.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
+    }
+
+    func getText() -> String {
+        guard let firstLetter = firstLetter.text, let secondLetter = secondLetter.text, let thirdLetter = thirdLetter.text, let firstNumber = firstNumber.text, let secondNumber = secondNumber.text, let thirdNumber = thirdNumber.text, let fourthNumber = fourthNumber.text else { return "" }
+
+        return "\(firstLetter)\(secondLetter)\(thirdLetter)\(firstNumber)\(secondNumber)\(thirdNumber)\(fourthNumber)"
     }
 }

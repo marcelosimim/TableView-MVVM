@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol CarRotationViewDelegate: AnyObject {
+    func didTapVerify(text: String, isOldLicensePlate: Bool)
+}
+
 protocol CarRotationViewProtocol {
     var view: UIView { get }
+    var delegate: CarRotationViewDelegate? { get set }
+    var licensePlateOld: OldLicensePlateTextField { get }
+    var licensePlateNew: NewLicensePlateTextField { get }
 }
 
 class CarRotationView: CarRotationViewProtocol {
     var view = UIView()
+    weak var delegate: CarRotationViewDelegate?
 
     private lazy var typeControl: UISegmentedControl = {
         let items = ["Placa antiga", "Placa nova"]
@@ -32,13 +40,13 @@ class CarRotationView: CarRotationViewProtocol {
         return imageView
     }()
 
-    private lazy var licensePlateOld: OldLicensePlateTextField = {
+    lazy var licensePlateOld: OldLicensePlateTextField = {
         let view = OldLicensePlateTextField()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private lazy var licensePlateNew: NewLicensePlateTextField = {
+    lazy var licensePlateNew: NewLicensePlateTextField = {
         let view = NewLicensePlateTextField()
         view.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -51,6 +59,7 @@ class CarRotationView: CarRotationViewProtocol {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 12
+        button.addTarget(self, action: #selector(didTapVerify), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -105,4 +114,13 @@ class CarRotationView: CarRotationViewProtocol {
         licensePlateNew.isHidden = !licensePlateOld.isHidden
     }
 
+    @objc private func didTapVerify() {
+        let isOldLicensePlate = !licensePlateOld.isHidden
+
+        if isOldLicensePlate {
+            delegate?.didTapVerify(text: licensePlateOld.getText(), isOldLicensePlate: true)
+        } else {
+            delegate?.didTapVerify(text: licensePlateNew.getText(), isOldLicensePlate: false)
+        }
+    }
 }
