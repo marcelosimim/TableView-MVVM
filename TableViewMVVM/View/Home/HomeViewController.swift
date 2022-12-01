@@ -56,6 +56,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             didTappedPlayer(player.item)
         }
         else if type == IMCCell.identifier { navigateTo(IMCViewController()) }
+        else if type == CarRotationCell.identifier { navigateTo(CarRotationViewController()) }
 
         tableView.deselectRow(at: indexPath, animated: true)
     }

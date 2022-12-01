@@ -15,10 +15,11 @@ protocol HomeViewModelProtocol {
 final class HomeViewModel: HomeViewModelProtocol {
     typealias PlayerCellConfigurator = TableCellConfigurator<PlayerCell, Player>
     typealias IMCCellConfigurator = TableCellConfigurator<IMCCell, IMCScreen>
+    typealias CarRotationCellConfigurator = TableCellConfigurator<CarRotationCell, CarRotationScreen>
+
     private var cells: [CellConfigurator] = [ PlayerCellConfigurator(item: Player(type: .neymar)),
                                               PlayerCellConfigurator(item: Player(type: .vinijr)),
                                               PlayerCellConfigurator(item: Player(type: .richarlisson)),
-                                              PlayerCellConfigurator(item: Player(type: .raphinha)),
                                               PlayerCellConfigurator(item: Player(type: .paqueta)),
                                               PlayerCellConfigurator(item: Player(type: .casemiro)),
                                               PlayerCellConfigurator(item: Player(type: .thiago)),
@@ -26,7 +27,8 @@ final class HomeViewModel: HomeViewModelProtocol {
                                               PlayerCellConfigurator(item: Player(type: .danilo)),
                                               PlayerCellConfigurator(item: Player(type: .alexSandro)),
                                               PlayerCellConfigurator(item: Player(type: .alisson)),
-                                              IMCCellConfigurator(item: IMCScreen(title: "Calculadora de IMC")) ]
+                                              IMCCellConfigurator(item: IMCScreen(title: "Calculadora de IMC")),
+                                              CarRotationCellConfigurator(item: CarRotationScreen(title: "Rodízio de carro em SP"))]
 }
 
 extension HomeViewModel {

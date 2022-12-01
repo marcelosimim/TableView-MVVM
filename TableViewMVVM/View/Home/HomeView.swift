@@ -17,6 +17,7 @@ class HomeView: HomeViewProtocol {
         let tableview = UITableView()
         tableview.register(PlayerCell.self, forCellReuseIdentifier: PlayerCell.identifier)
         tableview.register(IMCCell.self, forCellReuseIdentifier: IMCCell.identifier)
+        tableview.register(CarRotationCell.self, forCellReuseIdentifier: CarRotationCell.identifier)
         tableview.translatesAutoresizingMaskIntoConstraints = false
         return tableview
     }()
