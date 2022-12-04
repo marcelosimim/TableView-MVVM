@@ -11,15 +11,20 @@ protocol CarRotationViewModelProtocol {
     var didFinishValidationSuccess: ((String) -> Void) { get set }
     var didFinishValidationFailure: (() -> Void) { get set }
 
-    func verifyLicensePlate(text: String, isOldLicensePlate: Bool)
+    func verifyLicensePlate(text: String, licensePlate: LicensePlateType)
 }
 
 final class CarRotationViewModel: CarRotationViewModelProtocol {
     var didFinishValidationSuccess: ((String) -> Void) = { _ in }
     var didFinishValidationFailure: (() -> Void) = { }
 
-    func verifyLicensePlate(text: String, isOldLicensePlate: Bool) {
-        isOldLicensePlate ? isOldLicensePlateValid(text) : isNewLicensePlateValid(text)
+    func verifyLicensePlate(text: String, licensePlate: LicensePlateType) {
+        switch licensePlate {
+        case .brazilNew:
+            isNewLicensePlateValid(text)
+        case .brazilOld:
+            isOldLicensePlateValid(text)
+        }
     }
 
     private func isOldLicensePlateValid(_ text: String) {

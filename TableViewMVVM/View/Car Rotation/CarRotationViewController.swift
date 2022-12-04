@@ -14,22 +14,12 @@ class CarRotationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         carRotationView.delegate = self
-        setupTextFields()
         binds()
     }
 
     override func loadView() {
         super.loadView()
         view = carRotationView.view
-    }
-
-    private func setupTextFields() {
-        carRotationView.licensePlateOld.textfields.forEach { [unowned self] textfield in
-            textfield.delegate = self
-        }
-        carRotationView.licensePlateNew.textfields.forEach { [unowned self] textfield in
-            textfield.delegate = self
-        }
     }
 
     private func binds() {
@@ -56,23 +46,7 @@ class CarRotationViewController: UIViewController {
 }
 
 extension CarRotationViewController: CarRotationViewDelegate {
-    func didTapVerify(text: String, isOldLicensePlate: Bool) {
-        viewmodel.verifyLicensePlate(text: text, isOldLicensePlate: isOldLicensePlate)
-    }
-}
-
-extension CarRotationViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let textFieldText = textField.text, let rangeOfTextToReplace = Range(range, in: textFieldText) else {
-                return false
-        }
-        let substringToReplace = textFieldText[rangeOfTextToReplace]
-        let count = textFieldText.count - substringToReplace.count + string.count
-        return count <= 1
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func didTapVerify(text: String, licensePlate: LicensePlateType) {
+        viewmodel.verifyLicensePlate(text: text, licensePlate: licensePlate)
     }
 }

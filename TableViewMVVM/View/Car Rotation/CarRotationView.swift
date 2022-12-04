@@ -8,14 +8,13 @@
 import UIKit
 
 protocol CarRotationViewDelegate: AnyObject {
-    func didTapVerify(text: String, isOldLicensePlate: Bool)
+    func didTapVerify(text: String, licensePlate: LicensePlateType)
 }
 
 protocol CarRotationViewProtocol {
     var view: UIView { get }
     var delegate: CarRotationViewDelegate? { get set }
-    var licensePlateOld: OldLicensePlateTextField { get }
-    var licensePlateNew: NewLicensePlateTextField { get }
+    var licensePlate: LicensePlateTextField { get }
 }
 
 class CarRotationView: CarRotationViewProtocol {
@@ -40,15 +39,9 @@ class CarRotationView: CarRotationViewProtocol {
         return imageView
     }()
 
-    lazy var licensePlateOld: OldLicensePlateTextField = {
-        let view = OldLicensePlateTextField()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    lazy var licensePlateNew: NewLicensePlateTextField = {
-        let view = NewLicensePlateTextField()
-        view.isHidden = true
+    lazy var licensePlate: LicensePlateTextField = {
+        let view = LicensePlateTextField()
+        view.setupType(.brazilOld)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -72,8 +65,7 @@ class CarRotationView: CarRotationViewProtocol {
     private func addViews() {
         view.addSubview(typeControl)
         view.addSubview(licensePlateImage)
-        view.addSubview(licensePlateOld)
-        view.addSubview(licensePlateNew)
+        view.addSubview(licensePlate)
         view.addSubview(verifyButton)
         setupConstraints()
     }
@@ -88,15 +80,11 @@ class CarRotationView: CarRotationViewProtocol {
             licensePlateImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
             licensePlateImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            licensePlateOld.topAnchor.constraint(equalTo: licensePlateImage.bottomAnchor, constant: 32),
-            licensePlateOld.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            licensePlateOld.heightAnchor.constraint(equalToConstant: 50),
+            licensePlate.topAnchor.constraint(equalTo: licensePlateImage.bottomAnchor, constant: 32),
+            licensePlate.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            licensePlate.heightAnchor.constraint(equalToConstant: 50),
 
-            licensePlateNew.topAnchor.constraint(equalTo: licensePlateImage.bottomAnchor, constant: 32),
-            licensePlateNew.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            licensePlateNew.heightAnchor.constraint(equalToConstant: 50),
-
-            verifyButton.topAnchor.constraint(equalTo: licensePlateOld.bottomAnchor, constant: 50),
+            verifyButton.topAnchor.constraint(equalTo: licensePlate.bottomAnchor, constant: 50),
             verifyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 128),
             verifyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             verifyButton.heightAnchor.constraint(equalToConstant: 44),
@@ -106,21 +94,20 @@ class CarRotationView: CarRotationViewProtocol {
     @objc private func didTapTypeControl(_ sender: UISegmentedControl) {
         let selectedIndex = sender.selectedSegmentIndex
         defineImage(selectedIndex)
+        defineTextFieldType(selectedIndex)
+        licensePlate.clean()
     }
 
     private func defineImage(_ index: Int) {
         licensePlateImage.image = index == 0 ? .oldLicensePlate : .newLicensePlate
-        licensePlateOld.isHidden = index == 0 ? false : true
-        licensePlateNew.isHidden = !licensePlateOld.isHidden
+    }
+
+    private func defineTextFieldType(_ index: Int) {
+        index == 0 ? licensePlate.setupType(.brazilOld) : licensePlate.setupType(.brazilNew)
     }
 
     @objc private func didTapVerify() {
-        let isOldLicensePlate = !licensePlateOld.isHidden
-
-        if isOldLicensePlate {
-            delegate?.didTapVerify(text: licensePlateOld.getText(), isOldLicensePlate: true)
-        } else {
-            delegate?.didTapVerify(text: licensePlateNew.getText(), isOldLicensePlate: false)
-        }
+        let selectedIndex = typeControl.selectedSegmentIndex
+        selectedIndex == 0 ? delegate?.didTapVerify(text: licensePlate.getText(), licensePlate: .brazilOld) : delegate?.didTapVerify(text: licensePlate.getText(), licensePlate: .brazilNew)
     }
 }
