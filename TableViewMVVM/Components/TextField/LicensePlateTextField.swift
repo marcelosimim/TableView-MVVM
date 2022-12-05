@@ -137,9 +137,24 @@ extension LicensePlateTextField {
 
 extension LicensePlateTextField: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if isDefaultKeyboardType(textField) && isANumber(string) { return false }
+        else if isNumberPadKeyboardType(textField) && !isANumber(string) { return false }
+
         guard let textFieldText = textField.text, let rangeOfTextToReplace = Range(range, in: textFieldText) else { return false }
         let substringToReplace = textFieldText[rangeOfTextToReplace]
         let count = textFieldText.count - substringToReplace.count + string.count
         return count <= 1
+    }
+
+    private func isDefaultKeyboardType(_ textField: UITextField) -> Bool {
+      textField.keyboardType.rawValue == 0
+    }
+
+    private func isNumberPadKeyboardType(_ textField: UITextField) -> Bool {
+        textField.keyboardType.rawValue == 4
+    }
+
+    private func isANumber(_ text: String) -> Bool {
+        Int(text) != nil
     }
 }

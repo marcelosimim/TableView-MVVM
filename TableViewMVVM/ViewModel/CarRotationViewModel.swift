@@ -20,26 +20,13 @@ final class CarRotationViewModel: CarRotationViewModelProtocol {
 
     func verifyLicensePlate(text: String, licensePlate: LicensePlateType) {
         switch licensePlate {
-        case .brazilNew:
-            isNewLicensePlateValid(text)
-        case .brazilOld:
-            isOldLicensePlateValid(text)
+        case .brazilNew, .brazilOld:
+            isBrazilianLicensePlateValid(text)
         }
     }
 
-    private func isOldLicensePlateValid(_ text: String) {
-        let regex = "[A-Z]{3}[0-9]{4}"
-        let licencePlatePred = NSPredicate(format:"SELF MATCHES %@", regex)
-        let isValid = licencePlatePred.evaluate(with: text)
-
-        isValid ? didFinishValidationSuccess(text) : didFinishValidationFailure()
-    }
-
-    private func isNewLicensePlateValid(_ text: String) {
-        let regex = "[A-Z]{3}[0-9]{1}[A-Z]{1}[0-9]{2}"
-        let licencePlatePred = NSPredicate(format:"SELF MATCHES %@", regex)
-        let isValid = licencePlatePred.evaluate(with: text)
-        
+    private func isBrazilianLicensePlateValid(_ text: String) {
+        let isValid = text.count == 7
         isValid ? didFinishValidationSuccess(text) : didFinishValidationFailure()
     }
 }
