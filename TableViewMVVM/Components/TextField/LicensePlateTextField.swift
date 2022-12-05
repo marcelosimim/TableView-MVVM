@@ -26,9 +26,12 @@ class LicensePlateTextField: UITextField {
     }
 
     private func setupRoundedTextFields(_ textFields: [UITextField]) {
+        var tag = 0
         for textfield in textfields {
             textfield.delegate = self
             textfield.translatesAutoresizingMaskIntoConstraints = false
+            textfield.tag = tag
+            tag += 1
         }
     }
 
@@ -137,13 +140,23 @@ extension LicensePlateTextField {
 
 extension LicensePlateTextField: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if isDefaultKeyboardType(textField) && isANumber(string) { return false }
+        if isDefaultKeyboardType(textField) && !isAValidChar(string) { return false }
         else if isNumberPadKeyboardType(textField) && !isANumber(string) { return false }
 
         guard let textFieldText = textField.text, let rangeOfTextToReplace = Range(range, in: textFieldText) else { return false }
         let substringToReplace = textFieldText[rangeOfTextToReplace]
         let count = textFieldText.count - substringToReplace.count + string.count
-        return count <= 1
+
+        if count <= 1 {
+            textField.text = string
+            goToNextTextField(textField)
+            return true
+        } else { return false }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        goToNextTextField(textField)
+        return false
     }
 
     private func isDefaultKeyboardType(_ textField: UITextField) -> Bool {
@@ -156,5 +169,21 @@ extension LicensePlateTextField: UITextFieldDelegate {
 
     private func isANumber(_ text: String) -> Bool {
         Int(text) != nil
+    }
+
+    private func isAValidChar(_ text: String) -> Bool {
+        let regex = "[a-z]{1}"
+        let licencePlatePred = NSPredicate(format:"SELF MATCHES %@", regex)
+        let isValid = licencePlatePred.evaluate(with: text.lowercased())
+        return isValid
+    }
+
+    private func goToNextTextField(_ textField: UITextField) {
+        let nextTag: NSInteger = textField.tag + 1
+        guard let nextResponder: UIResponder = textField.superview?.viewWithTag(nextTag) else {
+            textField.resignFirstResponder()
+            return
+        }
+        nextResponder.becomeFirstResponder()
     }
 }
