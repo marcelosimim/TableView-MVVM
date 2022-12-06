@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A328947E293F67E1001A15CC /* PalindromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328947D293F67E1001A15CC /* PalindromoCell.swift */; };
+		A3289480293F680D001A15CC /* PalindromoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328947F293F680D001A15CC /* PalindromoScreen.swift */; };
 		A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6629362E8D00215FAF /* AppDelegate.swift */; };
 		A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6829362E8D00215FAF /* SceneDelegate.swift */; };
 		A3455B7029362E8E00215FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3455B6F29362E8E00215FAF /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A328947D293F67E1001A15CC /* PalindromoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoCell.swift; sourceTree = "<group>"; };
+		A328947F293F680D001A15CC /* PalindromoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoScreen.swift; sourceTree = "<group>"; };
 		A3455B6329362E8D00215FAF /* TableViewMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3455B6629362E8D00215FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3455B6829362E8D00215FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,11 +110,19 @@
 		A328947B293F6742001A15CC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A328947C293F67B0001A15CC /* Palindromo */,
 				A3DC905E29390E8400DCA426 /* Car Rotation */,
 				A3DC903D2936D46000DCA426 /* IMC */,
 				A3DC903C2936D45700DCA426 /* Home */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		A328947C293F67B0001A15CC /* Palindromo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Palindromo;
 			sourceTree = "<group>";
 		};
 		A3455B5A29362E8D00215FAF = {
@@ -249,6 +261,7 @@
 				A3455B992936C2A400215FAF /* TableCellConfigurator.swift */,
 				A3455B9B2936C4A000215FAF /* IMCCell.swift */,
 				A3DC905629390A4700DCA426 /* CarRotationCell.swift */,
+				A328947D293F67E1001A15CC /* PalindromoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -258,6 +271,7 @@
 			children = (
 				A3455B9D2936C4EA00215FAF /* IMCScreen.swift */,
 				A3DC905929390A8B00DCA426 /* CarRotationScreen.swift */,
+				A328947F293F680D001A15CC /* PalindromoScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -401,10 +415,12 @@
 				A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */,
 				A3455B862936315500215FAF /* Player.swift in Sources */,
 				A3DC906029390E9A00DCA426 /* CarRotationViewController.swift in Sources */,
+				A3289480293F680D001A15CC /* PalindromoScreen.swift in Sources */,
 				A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */,
 				A3DC903F2936D47100DCA426 /* IMCView.swift in Sources */,
 				A3F3B60129392B810024A208 /* LicensePlateTextField.swift in Sources */,
 				A3455B8029362FA400215FAF /* HomeViewController.swift in Sources */,
+				A328947E293F67E1001A15CC /* PalindromoCell.swift in Sources */,
 				A3455B892936320D00215FAF /* UIImage.swift in Sources */,
 				A3455B9E2936C4EA00215FAF /* IMCScreen.swift in Sources */,
 				A3DC904A2937B87C00DCA426 /* IMCResultViewController.swift in Sources */,
