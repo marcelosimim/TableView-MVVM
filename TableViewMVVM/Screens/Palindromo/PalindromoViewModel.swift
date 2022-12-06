@@ -25,8 +25,6 @@ final class PalindromoViewModel: PalindromoViewModelProtocol {
     func isPalindromo(_ text: String) -> Bool {
         let phrase = text.removeAccent().removePunctuation().removeSpacing().lowercased()
         let reversedPhrase = String(phrase.reversed())
-        print(phrase)
-        print(reversedPhrase)
         return phrase == reversedPhrase
     }
 }
