@@ -125,10 +125,18 @@
 		A328947C293F67B0001A15CC /* Palindromo */ = {
 			isa = PBXGroup;
 			children = (
+				A3289485293F7146001A15CC /* PalindromoSite */,
 				A3289481293F6929001A15CC /* PalindromoViewController.swift */,
 				A3289483293F6964001A15CC /* PalindromoView.swift */,
 			);
 			path = Palindromo;
+			sourceTree = "<group>";
+		};
+		A3289485293F7146001A15CC /* PalindromoSite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PalindromoSite;
 			sourceTree = "<group>";
 		};
 		A3455B5A29362E8D00215FAF = {

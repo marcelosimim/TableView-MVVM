@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol PalindromoViewDelegate: AnyObject {
+    func didTapLearnMore()
+}
+
 protocol PalindromoViewProtocol {
     var view: UIView { get }
+    var delegate: PalindromoViewDelegate? { get set }
 }
 
 class PalindromoView: PalindromoViewProtocol {
     var view = UIView()
+    var delegate: PalindromoViewDelegate?
 
     private lazy var infoLabel: UILabel = {
         let label = UILabel()
@@ -29,6 +35,7 @@ class PalindromoView: PalindromoViewProtocol {
         button.setTitleColor(.systemBlue, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
         button.contentHorizontalAlignment = .leading
+        button.addTarget(self, action: #selector(didTapLearnMore), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -97,5 +104,9 @@ class PalindromoView: PalindromoViewProtocol {
             verifyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             verifyButton.heightAnchor.constraint(equalToConstant: 44),
         ])
+    }
+
+    @objc private func didTapLearnMore() {
+        delegate?.didTapLearnMore()
     }
 }
