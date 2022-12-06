@@ -11,6 +11,8 @@
 		A3289480293F680D001A15CC /* PalindromoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328947F293F680D001A15CC /* PalindromoScreen.swift */; };
 		A3289482293F6929001A15CC /* PalindromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289481293F6929001A15CC /* PalindromoViewController.swift */; };
 		A3289484293F6964001A15CC /* PalindromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289483293F6964001A15CC /* PalindromoView.swift */; };
+		A3289487293F7319001A15CC /* PalindromoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289486293F7319001A15CC /* PalindromoViewModel.swift */; };
+		A3289489293F769E001A15CC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289488293F769E001A15CC /* String.swift */; };
 		A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6629362E8D00215FAF /* AppDelegate.swift */; };
 		A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6829362E8D00215FAF /* SceneDelegate.swift */; };
 		A3455B7029362E8E00215FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3455B6F29362E8E00215FAF /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		A328947F293F680D001A15CC /* PalindromoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoScreen.swift; sourceTree = "<group>"; };
 		A3289481293F6929001A15CC /* PalindromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoViewController.swift; sourceTree = "<group>"; };
 		A3289483293F6964001A15CC /* PalindromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoView.swift; sourceTree = "<group>"; };
+		A3289486293F7319001A15CC /* PalindromoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoViewModel.swift; sourceTree = "<group>"; };
+		A3289488293F769E001A15CC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A3455B6329362E8D00215FAF /* TableViewMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3455B6629362E8D00215FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3455B6829362E8D00215FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				A3289485293F7146001A15CC /* PalindromoSite */,
 				A3289481293F6929001A15CC /* PalindromoViewController.swift */,
 				A3289483293F6964001A15CC /* PalindromoView.swift */,
+				A3289486293F7319001A15CC /* PalindromoViewModel.swift */,
 			);
 			path = Palindromo;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 			children = (
 				A3455B882936320D00215FAF /* UIImage.swift */,
 				A3DC904429377E0200DCA426 /* Double.swift */,
+				A3289488293F769E001A15CC /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				A3F3B60E293962850024A208 /* CarRotationResultViewModel.swift in Sources */,
 				A3455B8C2936358500215FAF /* PlayerType.swift in Sources */,
 				A3DC904529377E0200DCA426 /* Double.swift in Sources */,
+				A3289487293F7319001A15CC /* PalindromoViewModel.swift in Sources */,
 				A3DC9062293915CE00DCA426 /* CarRotationView.swift in Sources */,
 				A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */,
 				A3455B84293630C700215FAF /* HomeViewModel.swift in Sources */,
@@ -432,6 +439,7 @@
 				A3DC906029390E9A00DCA426 /* CarRotationViewController.swift in Sources */,
 				A3289480293F680D001A15CC /* PalindromoScreen.swift in Sources */,
 				A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */,
+				A3289489293F769E001A15CC /* String.swift in Sources */,
 				A3DC903F2936D47100DCA426 /* IMCView.swift in Sources */,
 				A3F3B60129392B810024A208 /* LicensePlateTextField.swift in Sources */,
 				A3455B8029362FA400215FAF /* HomeViewController.swift in Sources */,

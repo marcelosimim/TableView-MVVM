@@ -9,6 +9,7 @@ import UIKit
 
 protocol PalindromoViewDelegate: AnyObject {
     func didTapLearnMore()
+    func didTapVerify(_ text: String)
 }
 
 protocol PalindromoViewProtocol {
@@ -63,6 +64,7 @@ class PalindromoView: PalindromoViewProtocol {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemPurple
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(didTapVerify), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -70,6 +72,8 @@ class PalindromoView: PalindromoViewProtocol {
     init() {
         view.backgroundColor = .white
         addViews()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
     private func addViews() {
@@ -108,5 +112,14 @@ class PalindromoView: PalindromoViewProtocol {
 
     @objc private func didTapLearnMore() {
         delegate?.didTapLearnMore()
+    }
+
+    @objc private func didTapVerify() {
+        guard let text = inputField.text else { return }
+        delegate?.didTapVerify(text)
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
