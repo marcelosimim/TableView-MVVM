@@ -103,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A328947B293F6742001A15CC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC905E29390E8400DCA426 /* Car Rotation */,
+				A3DC903D2936D46000DCA426 /* IMC */,
+				A3DC903C2936D45700DCA426 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		A3455B5A29362E8D00215FAF = {
 			isa = PBXGroup;
 			children = (
@@ -129,8 +139,7 @@
 				A3455B872936320200215FAF /* Extensions */,
 				A3455B7A29362E9A00215FAF /* AppDelegate */,
 				A3455B7E29362ECF00215FAF /* Resources */,
-				A3455B7C29362EB100215FAF /* View */,
-				A3455B7D29362EB600215FAF /* ViewModel */,
+				A328947B293F6742001A15CC /* Screens */,
 				A3455B7429362E8E00215FAF /* Info.plist */,
 			);
 			path = TableViewMVVM;
@@ -153,28 +162,6 @@
 				A3DC90462937B53600DCA426 /* IMC.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		A3455B7C29362EB100215FAF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				A3DC905E29390E8400DCA426 /* Car Rotation */,
-				A3DC903D2936D46000DCA426 /* IMC */,
-				A3DC903C2936D45700DCA426 /* Home */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A3455B7D29362EB600215FAF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A3455B83293630C700215FAF /* HomeViewModel.swift */,
-				A3DC90422936DB0600DCA426 /* IMCViewModel.swift */,
-				A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */,
-				A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */,
-				A3F3B60D293962850024A208 /* CarRotationResultViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A3455B7E29362ECF00215FAF /* Resources */ = {
@@ -227,6 +214,7 @@
 		A3DC903C2936D45700DCA426 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A3455B83293630C700215FAF /* HomeViewModel.swift */,
 				A3455B7F29362FA400215FAF /* HomeViewController.swift */,
 				A3455B8129362FBD00215FAF /* HomeView.swift */,
 			);
@@ -238,6 +226,7 @@
 			children = (
 				A3DC90482937B86900DCA426 /* IMCResult */,
 				A3DC903A2936D04E00DCA426 /* IMCViewController.swift */,
+				A3DC90422936DB0600DCA426 /* IMCViewModel.swift */,
 				A3DC903E2936D47100DCA426 /* IMCView.swift */,
 			);
 			path = IMC;
@@ -246,6 +235,7 @@
 		A3DC90482937B86900DCA426 /* IMCResult */ = {
 			isa = PBXGroup;
 			children = (
+				A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */,
 				A3DC90492937B87B00DCA426 /* IMCResultViewController.swift */,
 				A3DC904B2937B9F900DCA426 /* IMCResultView.swift */,
 			);
@@ -277,6 +267,7 @@
 			children = (
 				A3F3B608293960A50024A208 /* CarRotationResult */,
 				A3DC905F29390E9A00DCA426 /* CarRotationViewController.swift */,
+				A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */,
 				A3DC9061293915CE00DCA426 /* CarRotationView.swift */,
 			);
 			path = "Car Rotation";
@@ -304,6 +295,7 @@
 		A3F3B608293960A50024A208 /* CarRotationResult */ = {
 			isa = PBXGroup;
 			children = (
+				A3F3B60D293962850024A208 /* CarRotationResultViewModel.swift */,
 				A3F3B609293960BF0024A208 /* CarRotationResultViewController.swift */,
 				A3F3B60B2939619A0024A208 /* CarRotationResultView.swift */,
 			);
