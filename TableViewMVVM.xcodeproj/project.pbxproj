@@ -23,6 +23,8 @@
 		A33750C82941131F00ABEF8E /* NumbersRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C72941131F00ABEF8E /* NumbersRevealViewController.swift */; };
 		A33750CA2941155B00ABEF8E /* NumbersRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C92941155B00ABEF8E /* NumbersRevealView.swift */; };
 		A33750CC2941164300ABEF8E /* NumbersRevealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750CB2941164300ABEF8E /* NumbersRevealViewModel.swift */; };
+		A33750CE2941252F00ABEF8E /* Phrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750CD2941252F00ABEF8E /* Phrases.swift */; };
+		A33750D02941253A00ABEF8E /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750CF2941253A00ABEF8E /* Month.swift */; };
 		A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6629362E8D00215FAF /* AppDelegate.swift */; };
 		A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6829362E8D00215FAF /* SceneDelegate.swift */; };
 		A3455B7029362E8E00215FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3455B6F29362E8E00215FAF /* Assets.xcassets */; };
@@ -81,6 +83,8 @@
 		A33750C72941131F00ABEF8E /* NumbersRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersRevealViewController.swift; sourceTree = "<group>"; };
 		A33750C92941155B00ABEF8E /* NumbersRevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersRevealView.swift; sourceTree = "<group>"; };
 		A33750CB2941164300ABEF8E /* NumbersRevealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersRevealViewModel.swift; sourceTree = "<group>"; };
+		A33750CD2941252F00ABEF8E /* Phrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrases.swift; sourceTree = "<group>"; };
+		A33750CF2941253A00ABEF8E /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		A3455B6329362E8D00215FAF /* TableViewMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3455B6629362E8D00215FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3455B6829362E8D00215FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 				A3DC904D2937BCA400DCA426 /* IMCRange.swift */,
 				A3F3B60F293963510024A208 /* Weekday.swift */,
 				A3F3B611293D20420024A208 /* LicensePlateType.swift */,
+				A33750CD2941252F00ABEF8E /* Phrases.swift */,
+				A33750CF2941253A00ABEF8E /* Month.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -548,6 +554,7 @@
 				A3455B9C2936C4A000215FAF /* IMCCell.swift in Sources */,
 				A3F3B60E293962850024A208 /* CarRotationResultViewModel.swift in Sources */,
 				A3455B8C2936358500215FAF /* PlayerType.swift in Sources */,
+				A33750D02941253A00ABEF8E /* Month.swift in Sources */,
 				A3DC904529377E0200DCA426 /* Double.swift in Sources */,
 				A33750BD2940BF7700ABEF8E /* NumbersView.swift in Sources */,
 				A33750CA2941155B00ABEF8E /* NumbersRevealView.swift in Sources */,
@@ -576,6 +583,7 @@
 				A3455B892936320D00215FAF /* UIImage.swift in Sources */,
 				A3289484293F6964001A15CC /* PalindromoView.swift in Sources */,
 				A3DC904A2937B87C00DCA426 /* IMCResultViewController.swift in Sources */,
+				A33750CE2941252F00ABEF8E /* Phrases.swift in Sources */,
 				A3DC90502937BFCE00DCA426 /* IMCResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

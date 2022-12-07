@@ -15,6 +15,9 @@ protocol NumbersViewModelProtocol {
     var naturalValue: PublishRelay<Bool> { get }
     
     func verifyNumber(_ string: String)
+    func isAValidChar(_ string: String) -> Bool
+    func canTypeMinus(_ textFieldText: String) -> Bool
+    func isBackspace(_ string: String) -> Bool
 }
 
 final class NumbersViewModel: NumbersViewModelProtocol {
@@ -27,6 +30,18 @@ final class NumbersViewModel: NumbersViewModelProtocol {
         isAPrimeNumber(number)
         isAEvenNumber(number)
         isNaturalNumber(number)
+    }
+
+    func isAValidChar(_ string: String) -> Bool {
+        string.isANumber() || string == "-"
+    }
+
+    func canTypeMinus(_ textFieldText: String) -> Bool {
+        textFieldText.count == 0
+    }
+
+    func isBackspace(_ string: String) -> Bool {
+        string.isEmpty
     }
 
     private func isAPrimeNumber(_ number: Int) {
