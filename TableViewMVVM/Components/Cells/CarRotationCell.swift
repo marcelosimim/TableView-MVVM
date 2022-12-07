@@ -8,7 +8,7 @@
 import UIKit
 
 class CarRotationCell: UITableViewCell, ConfigurableCell {
-    typealias DataType = CarRotationScreen
+    typealias DataType = FeatureCell
     static var identifier = "\(CarRotationCell.self)"
 
     private lazy var titleLabel: UILabel = {
@@ -35,7 +35,7 @@ class CarRotationCell: UITableViewCell, ConfigurableCell {
         ])
     }
 
-    func configure(_ model: CarRotationScreen) {
+    func configure(_ model: FeatureCell) {
         titleLabel.text = model.title
     }
 }

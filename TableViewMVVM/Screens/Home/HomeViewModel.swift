@@ -14,9 +14,9 @@ protocol HomeViewModelProtocol {
 
 final class HomeViewModel: HomeViewModelProtocol {
     typealias PlayerCellConfigurator = TableCellConfigurator<PlayerCell, Player>
-    typealias IMCCellConfigurator = TableCellConfigurator<IMCCell, IMCScreen>
-    typealias CarRotationCellConfigurator = TableCellConfigurator<CarRotationCell, CarRotationScreen>
-    typealias PalindromoCellConfigurator = TableCellConfigurator<PalindromoCell, PalindromoScreen>
+    typealias IMCCellConfigurator = TableCellConfigurator<IMCCell, FeatureCell>
+    typealias CarRotationCellConfigurator = TableCellConfigurator<CarRotationCell, FeatureCell>
+    typealias PalindromoCellConfigurator = TableCellConfigurator<PalindromoCell, FeatureCell>
     typealias NumberCellConfigurator = TableCellConfigurator<NumberCell, FeatureCell>
 
     private var cells: [CellConfigurator] = [ PlayerCellConfigurator(item: Player(type: .neymar)),
@@ -29,9 +29,9 @@ final class HomeViewModel: HomeViewModelProtocol {
                                               PlayerCellConfigurator(item: Player(type: .danilo)),
                                               PlayerCellConfigurator(item: Player(type: .alexSandro)),
                                               PlayerCellConfigurator(item: Player(type: .alisson)),
-                                              IMCCellConfigurator(item: IMCScreen(title: "Calculadora de IMC")),
-                                              CarRotationCellConfigurator(item: CarRotationScreen(title: "Rodízio de carro em SP")),
-                                              PalindromoCellConfigurator(item: PalindromoScreen(title: "Palíndromo")),
+                                              IMCCellConfigurator(item: FeatureCell(title: "Calculadora de IMC")),
+                                              CarRotationCellConfigurator(item: FeatureCell(title: "Rodízio de carro em SP")),
+                                              PalindromoCellConfigurator(item: FeatureCell(title: "Palíndromo")),
                                               NumberCellConfigurator(item: FeatureCell(title: "Números"))]
 }
 

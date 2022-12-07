@@ -8,7 +8,7 @@
 import UIKit
 
 class PalindromoCell: UITableViewCell, ConfigurableCell {
-    typealias DataType = PalindromoScreen
+    typealias DataType = FeatureCell
     static var identifier = "\(PalindromoCell.self)"
 
     private lazy var titleLabel: UILabel = {
@@ -35,7 +35,7 @@ class PalindromoCell: UITableViewCell, ConfigurableCell {
         ])
     }
 
-    func configure(_ model: PalindromoScreen) {
+    func configure(_ model: FeatureCell) {
         titleLabel.text = model.title
     }
 }

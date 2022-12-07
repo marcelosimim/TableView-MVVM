@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3295B309C70A7052CAAF6E4C /* Pods_TableViewMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 248894DAE64EF7A512AB6114 /* Pods_TableViewMVVM.framework */; };
 		A328947E293F67E1001A15CC /* PalindromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328947D293F67E1001A15CC /* PalindromoCell.swift */; };
-		A3289480293F680D001A15CC /* PalindromoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A328947F293F680D001A15CC /* PalindromoScreen.swift */; };
 		A3289482293F6929001A15CC /* PalindromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289481293F6929001A15CC /* PalindromoViewController.swift */; };
 		A3289484293F6964001A15CC /* PalindromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289483293F6964001A15CC /* PalindromoView.swift */; };
 		A3289487293F7319001A15CC /* PalindromoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289486293F7319001A15CC /* PalindromoViewModel.swift */; };
@@ -30,7 +29,6 @@
 		A3455B982936C25A00215FAF /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B972936C25A00215FAF /* CellConfigurator.swift */; };
 		A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B992936C2A400215FAF /* TableCellConfigurator.swift */; };
 		A3455B9C2936C4A000215FAF /* IMCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B9B2936C4A000215FAF /* IMCCell.swift */; };
-		A3455B9E2936C4EA00215FAF /* IMCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B9D2936C4EA00215FAF /* IMCScreen.swift */; };
 		A3DC903B2936D04E00DCA426 /* IMCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC903A2936D04E00DCA426 /* IMCViewController.swift */; };
 		A3DC903F2936D47100DCA426 /* IMCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC903E2936D47100DCA426 /* IMCView.swift */; };
 		A3DC90412936D5C600DCA426 /* IMCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90402936D5C600DCA426 /* IMCTextField.swift */; };
@@ -44,7 +42,6 @@
 		A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90522937CF6F00DCA426 /* IMCMainButton.swift */; };
 		A3DC90552937CFBA00DCA426 /* IMCSecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */; };
 		A3DC905729390A4700DCA426 /* CarRotationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC905629390A4700DCA426 /* CarRotationCell.swift */; };
-		A3DC905A29390A8B00DCA426 /* CarRotationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC905929390A8B00DCA426 /* CarRotationScreen.swift */; };
 		A3DC906029390E9A00DCA426 /* CarRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC905F29390E9A00DCA426 /* CarRotationViewController.swift */; };
 		A3DC9062293915CE00DCA426 /* CarRotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC9061293915CE00DCA426 /* CarRotationView.swift */; };
 		A3F3B5FF29392AEA0024A208 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B5FE29392AEA0024A208 /* RoundedTextField.swift */; };
@@ -62,7 +59,6 @@
 		248894DAE64EF7A512AB6114 /* Pods_TableViewMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableViewMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D0EDF43632B246E6B88D926 /* Pods-TableViewMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewMVVM.release.xcconfig"; path = "Target Support Files/Pods-TableViewMVVM/Pods-TableViewMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		A328947D293F67E1001A15CC /* PalindromoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoCell.swift; sourceTree = "<group>"; };
-		A328947F293F680D001A15CC /* PalindromoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoScreen.swift; sourceTree = "<group>"; };
 		A3289481293F6929001A15CC /* PalindromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoViewController.swift; sourceTree = "<group>"; };
 		A3289483293F6964001A15CC /* PalindromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoView.swift; sourceTree = "<group>"; };
 		A3289486293F7319001A15CC /* PalindromoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromoViewModel.swift; sourceTree = "<group>"; };
@@ -85,7 +81,6 @@
 		A3455B972936C25A00215FAF /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
 		A3455B992936C2A400215FAF /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
 		A3455B9B2936C4A000215FAF /* IMCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCCell.swift; sourceTree = "<group>"; };
-		A3455B9D2936C4EA00215FAF /* IMCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCScreen.swift; sourceTree = "<group>"; };
 		A3DC903A2936D04E00DCA426 /* IMCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCViewController.swift; sourceTree = "<group>"; };
 		A3DC903E2936D47100DCA426 /* IMCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCView.swift; sourceTree = "<group>"; };
 		A3DC90402936D5C600DCA426 /* IMCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCTextField.swift; sourceTree = "<group>"; };
@@ -99,7 +94,6 @@
 		A3DC90522937CF6F00DCA426 /* IMCMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCMainButton.swift; sourceTree = "<group>"; };
 		A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCSecondButton.swift; sourceTree = "<group>"; };
 		A3DC905629390A4700DCA426 /* CarRotationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationCell.swift; sourceTree = "<group>"; };
-		A3DC905929390A8B00DCA426 /* CarRotationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationScreen.swift; sourceTree = "<group>"; };
 		A3DC905F29390E9A00DCA426 /* CarRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationViewController.swift; sourceTree = "<group>"; };
 		A3DC9061293915CE00DCA426 /* CarRotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationView.swift; sourceTree = "<group>"; };
 		A3F3B5FE29392AEA0024A208 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
@@ -309,9 +303,6 @@
 		A3DC905829390A7A00DCA426 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A3455B9D2936C4EA00215FAF /* IMCScreen.swift */,
-				A3DC905929390A8B00DCA426 /* CarRotationScreen.swift */,
-				A328947F293F680D001A15CC /* PalindromoScreen.swift */,
 				A33750B72940BE3200ABEF8E /* FeatureCell.swift */,
 			);
 			path = Screens;
@@ -487,7 +478,6 @@
 				A3DC905729390A4700DCA426 /* CarRotationCell.swift in Sources */,
 				A3F3B612293D20420024A208 /* LicensePlateType.swift in Sources */,
 				A3F3B610293963510024A208 /* Weekday.swift in Sources */,
-				A3DC905A29390A8B00DCA426 /* CarRotationScreen.swift in Sources */,
 				A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */,
 				A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */,
 				A3289482293F6929001A15CC /* PalindromoViewController.swift in Sources */,
@@ -512,7 +502,6 @@
 				A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */,
 				A3455B862936315500215FAF /* Player.swift in Sources */,
 				A3DC906029390E9A00DCA426 /* CarRotationViewController.swift in Sources */,
-				A3289480293F680D001A15CC /* PalindromoScreen.swift in Sources */,
 				A33750B82940BE3200ABEF8E /* FeatureCell.swift in Sources */,
 				A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */,
 				A3289489293F769E001A15CC /* String.swift in Sources */,
@@ -521,7 +510,6 @@
 				A3455B8029362FA400215FAF /* HomeViewController.swift in Sources */,
 				A328947E293F67E1001A15CC /* PalindromoCell.swift in Sources */,
 				A3455B892936320D00215FAF /* UIImage.swift in Sources */,
-				A3455B9E2936C4EA00215FAF /* IMCScreen.swift in Sources */,
 				A3289484293F6964001A15CC /* PalindromoView.swift in Sources */,
 				A3DC904A2937B87C00DCA426 /* IMCResultViewController.swift in Sources */,
 				A3DC90502937BFCE00DCA426 /* IMCResultViewModel.swift in Sources */,
