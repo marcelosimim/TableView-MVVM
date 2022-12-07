@@ -34,6 +34,7 @@ class NumbersView: NumbersViewProtocol {
     lazy var inputTextField: UITextField = {
         let textfield = UITextField()
         textfield.borderStyle = .roundedRect
+        textfield.clearButtonMode = .always
         textfield.translatesAutoresizingMaskIntoConstraints = false
         return textfield
     }()
