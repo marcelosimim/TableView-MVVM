@@ -58,6 +58,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         else if type == IMCCell.identifier { navigateTo(IMCViewController()) }
         else if type == CarRotationCell.identifier { navigateTo(CarRotationViewController()) }
         else if type == PalindromoCell.identifier { navigateTo(PalindromoViewController()) }
+        else if type == NumberCell.identifier { print("numbers") }
 
         tableView.deselectRow(at: indexPath, animated: true)
     }

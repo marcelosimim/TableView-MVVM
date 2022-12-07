@@ -19,6 +19,7 @@ class HomeView: HomeViewProtocol {
         tableview.register(IMCCell.self, forCellReuseIdentifier: IMCCell.identifier)
         tableview.register(CarRotationCell.self, forCellReuseIdentifier: CarRotationCell.identifier)
         tableview.register(PalindromoCell.self, forCellReuseIdentifier: PalindromoCell.identifier)
+        tableview.register(NumberCell.self, forCellReuseIdentifier: NumberCell.identifier)
         tableview.translatesAutoresizingMaskIntoConstraints = false
         return tableview
     }()
