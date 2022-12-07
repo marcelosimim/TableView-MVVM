@@ -45,4 +45,15 @@ extension String {
     func removeSpacing() -> String {
         self.replacingOccurrences(of: " ", with: "")
     }
+
+    func isALetter() -> Bool {
+        let regex = "[a-z]{1}"
+        let licencePlatePred = NSPredicate(format:"SELF MATCHES %@", regex)
+        let isValid = licencePlatePred.evaluate(with: self.lowercased())
+        return isValid
+    }
+
+    func isANumber() -> Bool {
+        Int(self) != nil
+    }
 }

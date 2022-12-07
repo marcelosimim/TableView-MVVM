@@ -15,6 +15,11 @@
 		A3289489293F769E001A15CC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3289488293F769E001A15CC /* String.swift */; };
 		A33750B62940BDDE00ABEF8E /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750B52940BDDE00ABEF8E /* NumberCell.swift */; };
 		A33750B82940BE3200ABEF8E /* FeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750B72940BE3200ABEF8E /* FeatureCell.swift */; };
+		A33750BB2940BF5400ABEF8E /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750BA2940BF5400ABEF8E /* NumbersViewController.swift */; };
+		A33750BD2940BF7700ABEF8E /* NumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750BC2940BF7700ABEF8E /* NumbersView.swift */; };
+		A33750C02940C40900ABEF8E /* NumberCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750BF2940C40900ABEF8E /* NumberCard.swift */; };
+		A33750C32940C48A00ABEF8E /* NumberClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C22940C48A00ABEF8E /* NumberClassificationView.swift */; };
+		A33750C52940F1CA00ABEF8E /* NumbersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C42940F1CA00ABEF8E /* NumbersViewModel.swift */; };
 		A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6629362E8D00215FAF /* AppDelegate.swift */; };
 		A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6829362E8D00215FAF /* SceneDelegate.swift */; };
 		A3455B7029362E8E00215FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3455B6F29362E8E00215FAF /* Assets.xcassets */; };
@@ -65,6 +70,11 @@
 		A3289488293F769E001A15CC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A33750B52940BDDE00ABEF8E /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 		A33750B72940BE3200ABEF8E /* FeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCell.swift; sourceTree = "<group>"; };
+		A33750BA2940BF5400ABEF8E /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		A33750BC2940BF7700ABEF8E /* NumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersView.swift; sourceTree = "<group>"; };
+		A33750BF2940C40900ABEF8E /* NumberCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCard.swift; sourceTree = "<group>"; };
+		A33750C22940C48A00ABEF8E /* NumberClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberClassificationView.swift; sourceTree = "<group>"; };
+		A33750C42940F1CA00ABEF8E /* NumbersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewModel.swift; sourceTree = "<group>"; };
 		A3455B6329362E8D00215FAF /* TableViewMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3455B6629362E8D00215FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3455B6829362E8D00215FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +139,7 @@
 		A328947B293F6742001A15CC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A33750B92940BF3D00ABEF8E /* Numbers */,
 				A328947C293F67B0001A15CC /* Palindromo */,
 				A3DC905E29390E8400DCA426 /* Car Rotation */,
 				A3DC903D2936D46000DCA426 /* IMC */,
@@ -153,6 +164,32 @@
 			children = (
 			);
 			path = PalindromoSite;
+			sourceTree = "<group>";
+		};
+		A33750B92940BF3D00ABEF8E /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				A33750BA2940BF5400ABEF8E /* NumbersViewController.swift */,
+				A33750BC2940BF7700ABEF8E /* NumbersView.swift */,
+				A33750C42940F1CA00ABEF8E /* NumbersViewModel.swift */,
+			);
+			path = Numbers;
+			sourceTree = "<group>";
+		};
+		A33750BE2940C3F500ABEF8E /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				A33750BF2940C40900ABEF8E /* NumberCard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		A33750C12940C47400ABEF8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A33750C22940C48A00ABEF8E /* NumberClassificationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A3455B5A29362E8D00215FAF = {
@@ -240,6 +277,8 @@
 		A3455B8D2936399A00215FAF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A33750C12940C47400ABEF8E /* View */,
+				A33750BE2940C3F500ABEF8E /* Card */,
 				A3F3B5FA29391A9E0024A208 /* Button */,
 				A3F3B5F929391A970024A208 /* TextField */,
 				A3DC90512937CF5200DCA426 /* Cells */,
@@ -478,6 +517,8 @@
 				A3DC905729390A4700DCA426 /* CarRotationCell.swift in Sources */,
 				A3F3B612293D20420024A208 /* LicensePlateType.swift in Sources */,
 				A3F3B610293963510024A208 /* Weekday.swift in Sources */,
+				A33750C02940C40900ABEF8E /* NumberCard.swift in Sources */,
+				A33750C52940F1CA00ABEF8E /* NumbersViewModel.swift in Sources */,
 				A3455B9A2936C2A400215FAF /* TableCellConfigurator.swift in Sources */,
 				A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */,
 				A3289482293F6929001A15CC /* PalindromoViewController.swift in Sources */,
@@ -491,6 +532,8 @@
 				A3F3B60E293962850024A208 /* CarRotationResultViewModel.swift in Sources */,
 				A3455B8C2936358500215FAF /* PlayerType.swift in Sources */,
 				A3DC904529377E0200DCA426 /* Double.swift in Sources */,
+				A33750BD2940BF7700ABEF8E /* NumbersView.swift in Sources */,
+				A33750BB2940BF5400ABEF8E /* NumbersViewController.swift in Sources */,
 				A3289487293F7319001A15CC /* PalindromoViewModel.swift in Sources */,
 				A3DC9062293915CE00DCA426 /* CarRotationView.swift in Sources */,
 				A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */,
@@ -498,6 +541,7 @@
 				A3DC903B2936D04E00DCA426 /* IMCViewController.swift in Sources */,
 				A3DC904C2937B9F900DCA426 /* IMCResultView.swift in Sources */,
 				A3DC90552937CFBA00DCA426 /* IMCSecondButton.swift in Sources */,
+				A33750C32940C48A00ABEF8E /* NumberClassificationView.swift in Sources */,
 				A3DC90472937B53600DCA426 /* IMC.swift in Sources */,
 				A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */,
 				A3455B862936315500215FAF /* Player.swift in Sources */,

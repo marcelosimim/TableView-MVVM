@@ -12,6 +12,10 @@ extension UIImage {
         UIImage(named: name) ?? .remove
     }
 
+    static func systemName(_ name: String) -> UIImage {
+        UIImage(systemName: name) ?? .remove
+    }
+
     // MARK: -  players
     static var alex: UIImage { generateImage("alex") }
     static var alisson: UIImage { generateImage("alisson") }
@@ -33,7 +37,11 @@ extension UIImage {
     static var obesity2: UIImage { generateImage("obesity2") }
     static var obesity3: UIImage { generateImage("obesity3") }
 
-    // MARK: -
+    // MARK: - License Plate
     static var newLicensePlate: UIImage { generateImage("placa-nova") }
     static var oldLicensePlate: UIImage { generateImage("placa-antiga") }
+
+    // MARK: - Numbers
+    static var checkmark: UIImage { systemName("checkmark") }
+    static var xMark: UIImage { systemName("xmark") }
 }

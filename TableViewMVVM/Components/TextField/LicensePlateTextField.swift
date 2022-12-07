@@ -140,8 +140,8 @@ extension LicensePlateTextField {
 
 extension LicensePlateTextField: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if isDefaultKeyboardType(textField) && !isAValidChar(string) { return false }
-        else if isNumberPadKeyboardType(textField) && !isANumber(string) { return false }
+        if isDefaultKeyboardType(textField) && !string.isALetter() { return false }
+        else if isNumberPadKeyboardType(textField) && !string.isANumber() { return false }
 
         guard let textFieldText = textField.text, let rangeOfTextToReplace = Range(range, in: textFieldText) else { return false }
         let substringToReplace = textFieldText[rangeOfTextToReplace]
@@ -165,17 +165,6 @@ extension LicensePlateTextField: UITextFieldDelegate {
 
     private func isNumberPadKeyboardType(_ textField: UITextField) -> Bool {
         textField.keyboardType.rawValue == 4
-    }
-
-    private func isANumber(_ text: String) -> Bool {
-        Int(text) != nil
-    }
-
-    private func isAValidChar(_ text: String) -> Bool {
-        let regex = "[a-z]{1}"
-        let licencePlatePred = NSPredicate(format:"SELF MATCHES %@", regex)
-        let isValid = licencePlatePred.evaluate(with: text.lowercased())
-        return isValid
     }
 
     private func goToNextTextField(_ textField: UITextField) {
