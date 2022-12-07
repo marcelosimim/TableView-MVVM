@@ -19,6 +19,7 @@ class NumbersViewController: UIViewController {
         title = "Números"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         numbersView.inputTextField.delegate = self
+        numbersView.delegate = self
         textFieldBinds()
         viewModelBinds()
     }
@@ -48,6 +49,17 @@ class NumbersViewController: UIViewController {
         viewmodel.naturalValue.bind { value in
             self.numbersView.numbersCard.updateNaturalCard(value)
         }.disposed(by: disposeBag)
+    }
+}
+
+extension NumbersViewController: NumbersViewDelegate {
+    func didTapReveal() {
+        guard let textFieldText = numbersView.inputTextField.text else { return }
+        
+        let number = Double(textFieldText)
+        let revealVC = NumbersRevealViewController(number: number)
+        revealVC.modalPresentationStyle = .formSheet
+        present(revealVC, animated: true)
     }
 }
 

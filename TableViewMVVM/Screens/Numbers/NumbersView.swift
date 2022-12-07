@@ -8,13 +8,19 @@
 import Foundation
 import UIKit
 
+protocol NumbersViewDelegate: AnyObject {
+    func didTapReveal()
+}
+
 protocol NumbersViewProtocol {
+    var delegate: NumbersViewDelegate? { get set }
     var view: UIView { get }
     var inputTextField: UITextField { get set }
     var numbersCard: NumberCard { get }
 }
 
 class NumbersView: NumbersViewProtocol {
+    var delegate: NumbersViewDelegate?
     var view = UIView()
 
     private lazy var whichValueLabel: UILabel = {
@@ -38,6 +44,18 @@ class NumbersView: NumbersViewProtocol {
         return card
     }()
 
+    private lazy var revealButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("REVELAR", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(red: 39/255, green: 36/255, blue: 113/255, alpha: 1)
+        button.layer.cornerRadius = 8
+        button.titleLabel?.font = .systemFont(ofSize: 12, weight: .bold)
+        button.addTarget(self, action: #selector(didTapReveal), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
     init() {
         view.backgroundColor = UIColor(red: 253/255, green: 253/255, blue: 253/255, alpha: 1)
         addViews()
@@ -47,6 +65,7 @@ class NumbersView: NumbersViewProtocol {
         view.addSubview(whichValueLabel)
         view.addSubview(inputTextField)
         view.addSubview(numbersCard)
+        view.addSubview(revealButton)
         setupConstraints()
     }
 
@@ -64,6 +83,15 @@ class NumbersView: NumbersViewProtocol {
             numbersCard.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 8),
             numbersCard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             numbersCard.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+
+            revealButton.topAnchor.constraint(equalTo: numbersCard.bottomAnchor, constant: 16),
+            revealButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
+            revealButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            revealButton.heightAnchor.constraint(equalToConstant: 44),
         ])
+    }
+
+    @objc private func didTapReveal() {
+        delegate?.didTapReveal()
     }
 }

@@ -20,6 +20,9 @@
 		A33750C02940C40900ABEF8E /* NumberCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750BF2940C40900ABEF8E /* NumberCard.swift */; };
 		A33750C32940C48A00ABEF8E /* NumberClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C22940C48A00ABEF8E /* NumberClassificationView.swift */; };
 		A33750C52940F1CA00ABEF8E /* NumbersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C42940F1CA00ABEF8E /* NumbersViewModel.swift */; };
+		A33750C82941131F00ABEF8E /* NumbersRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C72941131F00ABEF8E /* NumbersRevealViewController.swift */; };
+		A33750CA2941155B00ABEF8E /* NumbersRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750C92941155B00ABEF8E /* NumbersRevealView.swift */; };
+		A33750CC2941164300ABEF8E /* NumbersRevealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33750CB2941164300ABEF8E /* NumbersRevealViewModel.swift */; };
 		A3455B6729362E8D00215FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6629362E8D00215FAF /* AppDelegate.swift */; };
 		A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3455B6829362E8D00215FAF /* SceneDelegate.swift */; };
 		A3455B7029362E8E00215FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3455B6F29362E8E00215FAF /* Assets.xcassets */; };
@@ -75,6 +78,9 @@
 		A33750BF2940C40900ABEF8E /* NumberCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCard.swift; sourceTree = "<group>"; };
 		A33750C22940C48A00ABEF8E /* NumberClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberClassificationView.swift; sourceTree = "<group>"; };
 		A33750C42940F1CA00ABEF8E /* NumbersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewModel.swift; sourceTree = "<group>"; };
+		A33750C72941131F00ABEF8E /* NumbersRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersRevealViewController.swift; sourceTree = "<group>"; };
+		A33750C92941155B00ABEF8E /* NumbersRevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersRevealView.swift; sourceTree = "<group>"; };
+		A33750CB2941164300ABEF8E /* NumbersRevealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersRevealViewModel.swift; sourceTree = "<group>"; };
 		A3455B6329362E8D00215FAF /* TableViewMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3455B6629362E8D00215FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3455B6829362E8D00215FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		A33750B92940BF3D00ABEF8E /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				A33750C62941130B00ABEF8E /* NumbersReveal */,
 				A33750BA2940BF5400ABEF8E /* NumbersViewController.swift */,
 				A33750BC2940BF7700ABEF8E /* NumbersView.swift */,
 				A33750C42940F1CA00ABEF8E /* NumbersViewModel.swift */,
@@ -190,6 +197,16 @@
 				A33750C22940C48A00ABEF8E /* NumberClassificationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A33750C62941130B00ABEF8E /* NumbersReveal */ = {
+			isa = PBXGroup;
+			children = (
+				A33750C72941131F00ABEF8E /* NumbersRevealViewController.swift */,
+				A33750C92941155B00ABEF8E /* NumbersRevealView.swift */,
+				A33750CB2941164300ABEF8E /* NumbersRevealViewModel.swift */,
+			);
+			path = NumbersReveal;
 			sourceTree = "<group>";
 		};
 		A3455B5A29362E8D00215FAF = {
@@ -533,7 +550,9 @@
 				A3455B8C2936358500215FAF /* PlayerType.swift in Sources */,
 				A3DC904529377E0200DCA426 /* Double.swift in Sources */,
 				A33750BD2940BF7700ABEF8E /* NumbersView.swift in Sources */,
+				A33750CA2941155B00ABEF8E /* NumbersRevealView.swift in Sources */,
 				A33750BB2940BF5400ABEF8E /* NumbersViewController.swift in Sources */,
+				A33750CC2941164300ABEF8E /* NumbersRevealViewModel.swift in Sources */,
 				A3289487293F7319001A15CC /* PalindromoViewModel.swift in Sources */,
 				A3DC9062293915CE00DCA426 /* CarRotationView.swift in Sources */,
 				A3455B6929362E8D00215FAF /* SceneDelegate.swift in Sources */,
@@ -546,6 +565,7 @@
 				A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */,
 				A3455B862936315500215FAF /* Player.swift in Sources */,
 				A3DC906029390E9A00DCA426 /* CarRotationViewController.swift in Sources */,
+				A33750C82941131F00ABEF8E /* NumbersRevealViewController.swift in Sources */,
 				A33750B82940BE3200ABEF8E /* FeatureCell.swift in Sources */,
 				A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */,
 				A3289489293F769E001A15CC /* String.swift in Sources */,
