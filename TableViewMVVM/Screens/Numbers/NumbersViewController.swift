@@ -51,6 +51,11 @@ class NumbersViewController: UIViewController {
             guard let self = self else { return }
             self.numbersView.numbersCard.updateNaturalCard(value)
         }.disposed(by: disposeBag)
+
+        viewmodel.resetValues.bind { [weak self] in
+            guard let self = self else { return }
+            self.numbersView.numbersCard.resetCards()
+        }.disposed(by: disposeBag)
     }
 }
 

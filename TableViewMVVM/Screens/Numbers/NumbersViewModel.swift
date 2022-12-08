@@ -13,6 +13,7 @@ protocol NumbersViewModelProtocol {
     var primeValue: PublishRelay<Bool> { get }
     var evenValue: PublishRelay<Bool> { get }
     var naturalValue: PublishRelay<Bool> { get }
+    var resetValues: PublishRelay<Void> { get }
     
     func verifyNumber(_ string: String)
     func isAValidChar(_ string: String) -> Bool
@@ -24,9 +25,13 @@ final class NumbersViewModel: NumbersViewModelProtocol {
     var primeValue: PublishRelay<Bool> = PublishRelay()
     var evenValue: PublishRelay<Bool> = PublishRelay()
     var naturalValue: PublishRelay<Bool> = PublishRelay()
+    var resetValues: PublishRelay<Void> = PublishRelay()
 
     func verifyNumber(_ string: String) {
-        guard let number = Int(string) else { return }
+        guard let number = Int(string) else {
+            resetValues.accept(())
+            return
+        }
         isAPrimeNumber(number)
         isAEvenNumber(number)
         isNaturalNumber(number)

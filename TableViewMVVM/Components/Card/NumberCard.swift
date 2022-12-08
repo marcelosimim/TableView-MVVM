@@ -11,6 +11,7 @@ class NumberCard: UIView {
     private lazy var primeNumber: NumberClassificationView = {
         let view = NumberClassificationView()
         view.configure(text: "Número primo")
+        view.setupXmark()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -18,6 +19,7 @@ class NumberCard: UIView {
     private lazy var evenNumber: NumberClassificationView = {
         let view = NumberClassificationView()
         view.configure(text: "Número par")
+        view.setupCheckmark()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -25,6 +27,7 @@ class NumberCard: UIView {
     private lazy var oddNumber: NumberClassificationView = {
         let view = NumberClassificationView()
         view.configure(text: "Número ímpar")
+        view.setupXmark()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -32,6 +35,7 @@ class NumberCard: UIView {
     private lazy var naturalNumber: NumberClassificationView = {
         let view = NumberClassificationView()
         view.configure(text: "Número natural")
+        view.setupCheckmark()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -89,5 +93,12 @@ class NumberCard: UIView {
 
     func updateNaturalCard(_ value: Bool) {
         naturalNumber.updateIcon(value)
+    }
+
+    func resetCards() {
+        primeNumber.setupXmark()
+        evenNumber.setupCheckmark()
+        oddNumber.setupXmark()
+        naturalNumber.setupCheckmark()
     }
 }

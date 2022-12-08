@@ -10,8 +10,6 @@ import UIKit
 class NumberClassificationView: UIView {
     private lazy var iconClassification: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = .xMark
-        imageView.tintColor = .red
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -48,12 +46,21 @@ class NumberClassificationView: UIView {
         ])
     }
 
+    func setupXmark() {
+        iconClassification.image = .xMark
+        iconClassification.tintColor = .red
+    }
+
+    func setupCheckmark() {
+        iconClassification.image = .checkmark
+        iconClassification.tintColor = .systemGreen
+    }
+
     func configure(text: String) {
         classificationLabel.text = text
     }
 
     func updateIcon(_ checked: Bool) {
-        iconClassification.tintColor = checked ? .systemGreen : .red
-        iconClassification.image = checked ? .checkmark : .xMark
+        checked ? setupCheckmark() : setupXmark()
     }
 }
