@@ -14,11 +14,10 @@ protocol NumbersViewModelProtocol {
     var evenValue: PublishRelay<Bool> { get }
     var naturalValue: PublishRelay<Bool> { get }
     var resetValues: PublishRelay<Void> { get }
-    
+
     func verifyNumber(_ string: String)
     func isAValidChar(_ string: String) -> Bool
     func canTypeMinus(_ textFieldText: String) -> Bool
-    func isBackspace(_ string: String) -> Bool
 }
 
 final class NumbersViewModel: NumbersViewModelProtocol {
@@ -38,15 +37,11 @@ final class NumbersViewModel: NumbersViewModelProtocol {
     }
 
     func isAValidChar(_ string: String) -> Bool {
-        string.isANumber() || string == "-"
+        string.isANumber() || string == "-" || string == ""
     }
 
     func canTypeMinus(_ textFieldText: String) -> Bool {
         textFieldText.count == 0
-    }
-
-    func isBackspace(_ string: String) -> Bool {
-        string.isEmpty
     }
 
     private func isAPrimeNumber(_ number: Int) {

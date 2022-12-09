@@ -78,7 +78,6 @@ extension NumbersViewController: UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let textFieldText = textField.text else { return false }
-        if viewmodel.isBackspace(string) { return true }
         if !viewmodel.isAValidChar(string) { return false }
         if string == "-" && !viewmodel.canTypeMinus(textFieldText) { return false }
         return true
