@@ -14,21 +14,20 @@ protocol IMCViewDelegate: AnyObject {
 protocol IMCViewProtocol {
     var delegate: IMCViewDelegate? { get set }
     var view: UIView { get }
-    var weightTextField: IMCTextField { get }
-    var heightTextField: IMCTextField { get }
 }
 
 class IMCView: IMCViewProtocol {
     weak var delegate: IMCViewDelegate?
     var view: UIView = UIView()
-    lazy var weightTextField: IMCTextField = {
+
+    private lazy var weightTextField: IMCTextField = {
         let textfield = IMCTextField()
         textfield.setupPlaceHolder("Peso (Kg)")
         textfield.translatesAutoresizingMaskIntoConstraints = false
         return textfield
     }()
 
-    lazy var heightTextField: IMCTextField = {
+    private lazy var heightTextField: IMCTextField = {
         let textfield = IMCTextField()
         textfield.setupPlaceHolder("Altura (cm)")
         textfield.translatesAutoresizingMaskIntoConstraints = false

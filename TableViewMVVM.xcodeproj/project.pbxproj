@@ -48,14 +48,13 @@
 		A3DC904A2937B87C00DCA426 /* IMCResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90492937B87B00DCA426 /* IMCResultViewController.swift */; };
 		A3DC904C2937B9F900DCA426 /* IMCResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC904B2937B9F900DCA426 /* IMCResultView.swift */; };
 		A3DC904E2937BCA400DCA426 /* IMCRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC904D2937BCA400DCA426 /* IMCRange.swift */; };
-		A3DC90502937BFCE00DCA426 /* IMCResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */; };
 		A3DC90532937CF6F00DCA426 /* IMCMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90522937CF6F00DCA426 /* IMCMainButton.swift */; };
 		A3DC90552937CFBA00DCA426 /* IMCSecondButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */; };
 		A3DC905729390A4700DCA426 /* CarRotationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC905629390A4700DCA426 /* CarRotationCell.swift */; };
 		A3DC906029390E9A00DCA426 /* CarRotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC905F29390E9A00DCA426 /* CarRotationViewController.swift */; };
 		A3DC9062293915CE00DCA426 /* CarRotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC9061293915CE00DCA426 /* CarRotationView.swift */; };
 		A3F3B5FF29392AEA0024A208 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B5FE29392AEA0024A208 /* RoundedTextField.swift */; };
-		A3F3B60129392B810024A208 /* LicensePlateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60029392B810024A208 /* LicensePlateTextField.swift */; };
+		A3F3B60129392B810024A208 /* LicensePlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60029392B810024A208 /* LicensePlate.swift */; };
 		A3F3B60529393C3C0024A208 /* CarRotationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */; };
 		A3F3B60A293960BF0024A208 /* CarRotationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B609293960BF0024A208 /* CarRotationResultViewController.swift */; };
 		A3F3B60C2939619A0024A208 /* CarRotationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F3B60B2939619A0024A208 /* CarRotationResultView.swift */; };
@@ -110,14 +109,13 @@
 		A3DC90492937B87B00DCA426 /* IMCResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultViewController.swift; sourceTree = "<group>"; };
 		A3DC904B2937B9F900DCA426 /* IMCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultView.swift; sourceTree = "<group>"; };
 		A3DC904D2937BCA400DCA426 /* IMCRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCRange.swift; sourceTree = "<group>"; };
-		A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultViewModel.swift; sourceTree = "<group>"; };
 		A3DC90522937CF6F00DCA426 /* IMCMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCMainButton.swift; sourceTree = "<group>"; };
 		A3DC90542937CFBA00DCA426 /* IMCSecondButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCSecondButton.swift; sourceTree = "<group>"; };
 		A3DC905629390A4700DCA426 /* CarRotationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationCell.swift; sourceTree = "<group>"; };
 		A3DC905F29390E9A00DCA426 /* CarRotationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationViewController.swift; sourceTree = "<group>"; };
 		A3DC9061293915CE00DCA426 /* CarRotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationView.swift; sourceTree = "<group>"; };
 		A3F3B5FE29392AEA0024A208 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
-		A3F3B60029392B810024A208 /* LicensePlateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensePlateTextField.swift; sourceTree = "<group>"; };
+		A3F3B60029392B810024A208 /* LicensePlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensePlate.swift; sourceTree = "<group>"; };
 		A3F3B60429393C3C0024A208 /* CarRotationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationViewModel.swift; sourceTree = "<group>"; };
 		A3F3B609293960BF0024A208 /* CarRotationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationResultViewController.swift; sourceTree = "<group>"; };
 		A3F3B60B2939619A0024A208 /* CarRotationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRotationResultView.swift; sourceTree = "<group>"; };
@@ -161,19 +159,11 @@
 		A328947C293F67B0001A15CC /* Palindromo */ = {
 			isa = PBXGroup;
 			children = (
-				A3289485293F7146001A15CC /* PalindromoSite */,
 				A3289481293F6929001A15CC /* PalindromoViewController.swift */,
 				A3289483293F6964001A15CC /* PalindromoView.swift */,
 				A3289486293F7319001A15CC /* PalindromoViewModel.swift */,
 			);
 			path = Palindromo;
-			sourceTree = "<group>";
-		};
-		A3289485293F7146001A15CC /* PalindromoSite */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PalindromoSite;
 			sourceTree = "<group>";
 		};
 		A33750B92940BF3D00ABEF8E /* Numbers */ = {
@@ -234,12 +224,12 @@
 		A3455B6529362E8D00215FAF /* TableViewMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				A3455B7A29362E9A00215FAF /* AppDelegate */,
 				A3455B942936C17F00215FAF /* Protocols */,
 				A3455B8D2936399A00215FAF /* Components */,
 				A3455B8A2936357500215FAF /* Enum */,
 				A3455B7B29362EA700215FAF /* Model */,
 				A3455B872936320200215FAF /* Extensions */,
-				A3455B7A29362E9A00215FAF /* AppDelegate */,
 				A3455B7E29362ECF00215FAF /* Resources */,
 				A328947B293F6742001A15CC /* Screens */,
 				A3455B7429362E8E00215FAF /* Info.plist */,
@@ -342,7 +332,6 @@
 		A3DC90482937B86900DCA426 /* IMCResult */ = {
 			isa = PBXGroup;
 			children = (
-				A3DC904F2937BFCE00DCA426 /* IMCResultViewModel.swift */,
 				A3DC90492937B87B00DCA426 /* IMCResultViewController.swift */,
 				A3DC904B2937B9F900DCA426 /* IMCResultView.swift */,
 			);
@@ -386,7 +375,7 @@
 			children = (
 				A3DC90402936D5C600DCA426 /* IMCTextField.swift */,
 				A3F3B5FE29392AEA0024A208 /* RoundedTextField.swift */,
-				A3F3B60029392B810024A208 /* LicensePlateTextField.swift */,
+				A3F3B60029392B810024A208 /* LicensePlate.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -577,14 +566,13 @@
 				A3455B8F293639AB00215FAF /* PlayerCell.swift in Sources */,
 				A3289489293F769E001A15CC /* String.swift in Sources */,
 				A3DC903F2936D47100DCA426 /* IMCView.swift in Sources */,
-				A3F3B60129392B810024A208 /* LicensePlateTextField.swift in Sources */,
+				A3F3B60129392B810024A208 /* LicensePlate.swift in Sources */,
 				A3455B8029362FA400215FAF /* HomeViewController.swift in Sources */,
 				A328947E293F67E1001A15CC /* PalindromoCell.swift in Sources */,
 				A3455B892936320D00215FAF /* UIImage.swift in Sources */,
 				A3289484293F6964001A15CC /* PalindromoView.swift in Sources */,
 				A3DC904A2937B87C00DCA426 /* IMCResultViewController.swift in Sources */,
 				A33750CE2941252F00ABEF8E /* Phrases.swift in Sources */,
-				A3DC90502937BFCE00DCA426 /* IMCResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

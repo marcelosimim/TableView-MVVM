@@ -14,10 +14,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupTitle()
         viewModel.shuffleCells()
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        title = "Menu"
     }
 
     override func loadView() {
@@ -28,6 +26,12 @@ class HomeViewController: UIViewController {
     private func setupTableView() {
         homeView.tableView.delegate = self
         homeView.tableView.dataSource = self
+    }
+
+    private func setupTitle() {
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        title = "Menu"
     }
 }
 
@@ -62,6 +66,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
+    #warning("s?")
 
     private func didTappedPlayer(_ player: Player) {
         let alertController = UIAlertController(title: "Quem sou eu?", message: "Eu sou o \(player.type.name)!", preferredStyle: .alert)

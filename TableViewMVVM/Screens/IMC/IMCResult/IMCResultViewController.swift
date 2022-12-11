@@ -9,7 +9,6 @@ import UIKit
 
 class IMCResultViewController: UIViewController {
     private var imcResultView: IMCResultViewProtocol = IMCResultView()
-    private var viewmodel: IMCResultViewModelProtocol = IMCResultViewModel()
     private var imc: IMC
 
     init(imc: IMC) {
@@ -24,19 +23,12 @@ class IMCResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imcResultView.delegate = self
-        binds()
-        viewmodel.calculate(imc)
+        imcResultView.updateView(imc)
     }
 
     override func loadView() {
         super.loadView()
         view = imcResultView.view
-    }
-
-    private func binds() {
-        viewmodel.didFinishCalculation = { [weak self] imc in
-            self?.imcResultView.updateView(imc)
-        }
     }
 }
 

@@ -7,7 +7,15 @@
 
 import UIKit
 
-class LicensePlateTextField: UITextField {
+class LicensePlate: UIView {
+    private lazy var licensePlateImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 12
+        return imageView
+    }()
+    
     private lazy var textfields: [UITextField] = [firstTextField, secondTextField, thirdTextField, fourthTextField, fifthTextField, sixthTextField, seventhTextField]
     private lazy var firstTextField = RoundedTextField()
     private lazy var secondTextField = RoundedTextField()
@@ -16,8 +24,6 @@ class LicensePlateTextField: UITextField {
     private lazy var fifthTextField = RoundedTextField()
     private lazy var sixthTextField = RoundedTextField()
     private lazy var seventhTextField = RoundedTextField()
-
-    private var type: LicensePlateType?
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -29,13 +35,19 @@ class LicensePlateTextField: UITextField {
         var tag = 0
         for textfield in textfields {
             textfield.delegate = self
-            textfield.translatesAutoresizingMaskIntoConstraints = false
             textfield.tag = tag
             tag += 1
         }
     }
 
+    private func clean() {
+        for textfield in textfields {
+            textfield.text = ""
+        }
+    }
+
     private func addViews() {
+        addSubview(licensePlateImage)
         addSubview(firstTextField)
         addSubview(secondTextField)
         addSubview(thirdTextField)
@@ -47,56 +59,45 @@ class LicensePlateTextField: UITextField {
     }
 
     private func setupConstraints() {
-        let textfieldHeight: CGFloat = 30
         let leading: CGFloat = 8
         NSLayoutConstraint.activate([
-            firstTextField.topAnchor.constraint(equalTo: topAnchor),
+            licensePlateImage.topAnchor.constraint(equalTo: topAnchor),
+            licensePlateImage.leadingAnchor.constraint(equalTo: leadingAnchor),
+            licensePlateImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+            licensePlateImage.heightAnchor.constraint(equalToConstant: 100),
+
             firstTextField.leadingAnchor.constraint(equalTo: leadingAnchor),
-            firstTextField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            firstTextField.widthAnchor.constraint(equalToConstant: textfieldHeight),
-
-            secondTextField.topAnchor.constraint(equalTo: topAnchor),
             secondTextField.leadingAnchor.constraint(equalTo: firstTextField.trailingAnchor, constant: leading),
-            secondTextField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            secondTextField.widthAnchor.constraint(equalToConstant: textfieldHeight),
-
-            thirdTextField.topAnchor.constraint(equalTo: topAnchor),
             thirdTextField.leadingAnchor.constraint(equalTo: secondTextField.trailingAnchor, constant: leading),
-            thirdTextField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            thirdTextField.widthAnchor.constraint(equalToConstant: textfieldHeight),
-
-            fourthTextField.topAnchor.constraint(equalTo: topAnchor),
             fourthTextField.leadingAnchor.constraint(equalTo: thirdTextField.trailingAnchor, constant: leading),
-            fourthTextField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            fourthTextField.widthAnchor.constraint(equalToConstant: textfieldHeight),
-
-            fifthTextField.topAnchor.constraint(equalTo: topAnchor),
             fifthTextField.leadingAnchor.constraint(equalTo: fourthTextField.trailingAnchor, constant: leading),
-            fifthTextField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            fifthTextField.widthAnchor.constraint(equalToConstant: textfieldHeight),
-
-            sixthTextField.topAnchor.constraint(equalTo: topAnchor),
             sixthTextField.leadingAnchor.constraint(equalTo: fifthTextField.trailingAnchor, constant: leading),
-            sixthTextField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            sixthTextField.widthAnchor.constraint(equalToConstant: textfieldHeight),
-
-            seventhTextField.topAnchor.constraint(equalTo: topAnchor),
             seventhTextField.leadingAnchor.constraint(equalTo: sixthTextField.trailingAnchor, constant: leading),
-            seventhTextField.bottomAnchor.constraint(equalTo: bottomAnchor),
-            seventhTextField.widthAnchor.constraint(equalToConstant: textfieldHeight),
             seventhTextField.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
+        setupTextFieldConstraints()
+    }
+
+    private func setupTextFieldConstraints() {
+        let width: CGFloat = 35
+        let height: CGFloat = 45
+        for textfield in textfields {
+            textfield.topAnchor.constraint(equalTo: licensePlateImage.bottomAnchor, constant: 32).isActive = true
+            textfield.widthAnchor.constraint(equalToConstant: width).isActive = true
+            textfield.heightAnchor.constraint(equalToConstant: height).isActive = true
+            textfield.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+            textfield.translatesAutoresizingMaskIntoConstraints = false
+        }
     }
 
     func setupType(_ type: LicensePlateType) {
-        self.type = type
-
         switch type {
         case .brazilNew:
             setupBrazilianNew()
         case .brazilOld:
             setupBrazilianOld()
         }
+        clean()
     }
 
     func getText() -> String {
@@ -104,17 +105,11 @@ class LicensePlateTextField: UITextField {
 
         return "\(firstLetter)\(secondLetter)\(thirdLetter)\(firstNumber)\(secondNumber)\(thirdNumber)\(fourthNumber)"
     }
-
-    func clean() {
-        for textfield in textfields {
-            textfield.text = ""
-        }
-    }
 }
 
 // MARK: - Setup type
 
-extension LicensePlateTextField {
+extension LicensePlate {
     private func setupBrazilianNew() {
         firstTextField.keyboardType = .default
         secondTextField.keyboardType = .default
@@ -123,6 +118,7 @@ extension LicensePlateTextField {
         fifthTextField.keyboardType = .default
         sixthTextField.keyboardType = .numberPad
         seventhTextField.keyboardType = .numberPad
+        licensePlateImage.image = .newLicensePlate
     }
 
     private func setupBrazilianOld() {
@@ -133,12 +129,13 @@ extension LicensePlateTextField {
         fifthTextField.keyboardType = .numberPad
         sixthTextField.keyboardType = .numberPad
         seventhTextField.keyboardType = .numberPad
+        licensePlateImage.image = .oldLicensePlate
     }
 }
 
 // MARK: - Delegate
 
-extension LicensePlateTextField: UITextFieldDelegate {
+extension LicensePlate: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if isDefaultKeyboardType(textField) && !string.isALetter() { return false }
         else if isNumberPadKeyboardType(textField) && !string.isANumber() { return false }

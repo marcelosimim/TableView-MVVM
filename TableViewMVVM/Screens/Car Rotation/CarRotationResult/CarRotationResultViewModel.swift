@@ -8,13 +8,26 @@
 import Foundation
 
 protocol CarRotationResultViewModelProtocol {
-    func currentDay() -> Weekday
+    func calculateDays() -> [Weekday]
     func checkRestriction(_ licensePlate: String) -> Weekday
 }
 
 final class CarRotationResultViewModel: CarRotationResultViewModelProtocol {
+    func calculateDays() -> [Weekday] {
+        let currentDay = currentDay()
+        var days:[Weekday] = []
+        for index in 0...6 {
+            days.append(getDay(weekday: currentDay, plus: index))
+        }
+        return days
+    }
 
-    func currentDay() -> Weekday {
+    func checkRestriction(_ licensePlate: String) -> Weekday {
+        guard let lastNumber = licensePlate.last else { return .monday }
+        return restrictionDay(lastNumber)
+    }
+
+    private func currentDay() -> Weekday {
         let date = Date()
         let calendar = Calendar.current
         let weekdayRawValue = calendar.component(.weekday, from: date)
@@ -23,9 +36,11 @@ final class CarRotationResultViewModel: CarRotationResultViewModelProtocol {
         return weekday ?? .monday
     }
 
-    func checkRestriction(_ licensePlate: String) -> Weekday {
-        guard let lastNumber = licensePlate.last else { return .monday }
-        return restrictionDay(lastNumber)
+    private func getDay(weekday: Weekday, plus: Int) -> Weekday {
+        let rawValue = weekday.rawValue
+        let day = rawValue + plus
+        if day <= 7 { return Weekday(rawValue: day) ?? .monday }
+        else { return Weekday(rawValue: day-7) ?? .monday }
     }
 
     private func restrictionDay(_ number: Character) -> Weekday {

@@ -14,7 +14,7 @@ protocol CarRotationViewDelegate: AnyObject {
 protocol CarRotationViewProtocol {
     var view: UIView { get }
     var delegate: CarRotationViewDelegate? { get set }
-    var licensePlate: LicensePlateTextField { get }
+    var licensePlate: LicensePlate { get }
 }
 
 class CarRotationView: CarRotationViewProtocol {
@@ -30,17 +30,8 @@ class CarRotationView: CarRotationViewProtocol {
         return control
     }()
 
-    private lazy var licensePlateImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = .oldLicensePlate
-        imageView.layer.cornerRadius = 12
-        return imageView
-    }()
-
-    lazy var licensePlate: LicensePlateTextField = {
-        let view = LicensePlateTextField()
+    lazy var licensePlate: LicensePlate = {
+        let view = LicensePlate()
         view.setupType(.brazilOld)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -64,7 +55,6 @@ class CarRotationView: CarRotationViewProtocol {
 
     private func addViews() {
         view.addSubview(typeControl)
-        view.addSubview(licensePlateImage)
         view.addSubview(licensePlate)
         view.addSubview(verifyButton)
         setupConstraints()
@@ -76,13 +66,10 @@ class CarRotationView: CarRotationViewProtocol {
             typeControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
             typeControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            licensePlateImage.topAnchor.constraint(equalTo: typeControl.bottomAnchor, constant: 32),
-            licensePlateImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 64),
-            licensePlateImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
-            licensePlate.topAnchor.constraint(equalTo: licensePlateImage.bottomAnchor, constant: 32),
+            licensePlate.topAnchor.constraint(equalTo: typeControl.bottomAnchor, constant: 32),
             licensePlate.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            licensePlate.heightAnchor.constraint(equalToConstant: 50),
+            licensePlate.widthAnchor.constraint(equalToConstant: 395),
+            licensePlate.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 32),
 
             verifyButton.topAnchor.constraint(equalTo: licensePlate.bottomAnchor, constant: 50),
             verifyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 128),
@@ -93,13 +80,7 @@ class CarRotationView: CarRotationViewProtocol {
 
     @objc private func didTapTypeControl(_ sender: UISegmentedControl) {
         let selectedIndex = sender.selectedSegmentIndex
-        defineImage(selectedIndex)
         defineTextFieldType(selectedIndex)
-        licensePlate.clean()
-    }
-
-    private func defineImage(_ index: Int) {
-        licensePlateImage.image = index == 0 ? .oldLicensePlate : .newLicensePlate
     }
 
     private func defineTextFieldType(_ index: Int) {

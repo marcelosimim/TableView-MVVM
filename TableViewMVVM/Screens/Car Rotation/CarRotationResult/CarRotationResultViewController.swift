@@ -33,7 +33,7 @@ class CarRotationResultViewController: UIViewController {
     }
 
     private func setupView() {
-        let currentDay = viewmodel.currentDay()
+        let currentDay = viewmodel.calculateDays()
         carRotationResultView.setupDayLabels(currentDay)
 
         let restrictionDay = viewmodel.checkRestriction(licensePlate)

@@ -10,7 +10,7 @@ import UIKit
 protocol CarRotationResultViewProtocol {
     var view: UIView { get }
 
-    func setupDayLabels(_ weekday: Weekday)
+    func setupDayLabels(_ days: [Weekday])
     func setupRestriction(_ weekday: Weekday)
 }
 
@@ -116,42 +116,24 @@ class CarRotationResultView: CarRotationResultViewProtocol {
         ])
     }
 
-    func setupDayLabels(_ weekday: Weekday) {
+    func setupDayLabels(_ days: [Weekday]) {
         var index = 0
         labels.forEach {
-            $0.text?.append(calculateDay(weekday: weekday, plus: index)?.title ?? "")
+            $0.text?.append(days[index].title)
+            $0.tag = days[index].rawValue
             index += 1
         }
-
-        setupTags(weekday)
     }
 
     func setupRestriction(_ weekday: Weekday) {
         labels.forEach {
-            let isRestrictionDay = $0.tag == weekday.rawValue
-            setupLabelRestriction(label: $0, isRestrictionDay: isRestrictionDay)
-        }
+           let isRestrictionDay = $0.tag == weekday.rawValue
+           setupLabelRestriction(label: $0, isRestrictionDay: isRestrictionDay)
+       }
     }
 }
 
 extension CarRotationResultView {
-    private func calculateDay(weekday: Weekday, plus: Int) -> Weekday? {
-        let rawValue = weekday.rawValue
-        let day = rawValue + plus
-        if day <= 7 { return Weekday(rawValue: day) }
-        else { return Weekday(rawValue: day-7) }
-    }
-
-    private func setupTags(_ weekday: Weekday) {
-        todayLabel.tag = calculateDay(weekday: weekday, plus: 0)?.rawValue ?? 0
-        tomorrowLabel.tag = calculateDay(weekday: weekday, plus: 1)?.rawValue ?? 0
-        day3Label.tag = calculateDay(weekday: weekday, plus: 2)?.rawValue ?? 0
-        day4Label.tag = calculateDay(weekday: weekday, plus: 3)?.rawValue ?? 0
-        day5Label.tag = calculateDay(weekday: weekday, plus: 4)?.rawValue ?? 0
-        day6Label.tag = calculateDay(weekday: weekday, plus: 5)?.rawValue ?? 0
-        day7Label.tag = calculateDay(weekday: weekday, plus: 6)?.rawValue ?? 0
-    }
-
     private func setupLabelRestriction(label: UILabel, isRestrictionDay: Bool) {
         guard let currentText = label.text else { return }
         if isRestrictionDay {
